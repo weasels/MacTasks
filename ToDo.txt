@@ -1,7 +1,3 @@
-IVs
-
-sketchup 2015 license
-
 cube reconfig
 
 nms1/6 SSDs, drive config
