@@ -37,8 +37,4 @@ Network configure script errors
 	- check cases
 	- failures 100% repeatable?
 
-Is Parallels container installation automateable?
-	- what is ASU's license like? just staff/faculty (small # of seats)?
-		-> small license exists, enterprise license in no man's land currently
-
 DS reporting using our log files app
