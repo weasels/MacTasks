@@ -1,14 +1,19 @@
 cube reconfig
 
+FV2
+	- what happens when you image an already-encrypted volume?
+	- DS able to decrypt or ...?
+
 nms1/6 SSDs, drive config
 	- also talk with Jim/etc about installation
+	- order drive adapters
 
 LACP on all servers - start with Poly or Tempe?
 
 What to do with Xserves?
 	- tech studio?
 	- check old Xserves in dev room
-		- G5s or intel?
+		- G5s, so just keep for spare parts
 	- 2nd server for Poly?
 
 tech studio DS setup?
@@ -34,5 +39,6 @@ Network configure script errors
 
 Is Parallels container installation automateable?
 	- what is ASU's license like? just staff/faculty (small # of seats)?
+		-> small license exists, enterprise license in no man's land currently
 
 DS reporting using our log files app
