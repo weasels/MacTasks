@@ -1,0 +1,42 @@
+IVs
+
+sketchup 2015 license
+
+cube reconfig
+
+nms1/6 SSDs, drive config
+	- also talk with Jim/etc about installation
+
+LACP on all servers - start with Poly or Tempe?
+
+What to do with Xserves?
+	- tech studio?
+	- check old Xserves in dev room
+		- G5s or intel?
+	- 2nd server for Poly?
+
+tech studio DS setup?
+	- what hardware?
+	- how to isolate network interfaces
+	- needs
+	- separate tech studio DS group
+	- separate tech studio workflow(s)
+	
+Logical volume check for DS workflows
+	- what workflow(s)?
+	- separate script or ?
+	
+
+SILC printers config 
+	- specifics?
+	- anything special needed for Papercut?
+	- meet w/ David and/or Ken on ____ date?
+
+Network configure script errors
+	- check cases
+	- failures 100% repeatable?
+
+Is Parallels container installation automateable?
+	- what is ASU's license like? just staff/faculty (small # of seats)?
+
+DS reporting using our log files app
