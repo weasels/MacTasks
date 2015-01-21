@@ -13,8 +13,8 @@ LACP on all servers - start with Poly or Tempe?
 
 What to do with Xserves?
 	- tech studio?
-	- check old Xserves in dev room
-		- G5s, so just keep for spare parts
+	* check old Xserves in dev room
+		* G5s, so just keep for spare parts
 	- 2nd server for Poly?
 
 tech studio DS setup?
@@ -31,6 +31,9 @@ Logical volume check for DS workflows
 
 SILC printers config 
 	- specifics?
+		- IP: 129.219.150.224
+		- HP LaserJet600 M603
+		- HP PostScript v 19.9
 	- anything special needed for Papercut?
 	- meet w/ David and/or Ken on ____ date?
 
@@ -39,3 +42,9 @@ Network configure script errors
 	- failures 100% repeatable?
 
 DS reporting using our log files app
+
+HRC staff machines to Mt Lion
+
+DISCVRY 350 resolution/mirroring by hand
+
+PSH151 HDMI audio out
