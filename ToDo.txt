@@ -26,9 +26,6 @@ tech studio DS setup?
 	
 Logical volume check for DS workflows
 	- what workflow(s)?
-	* separate script YES
-	* script testing
-		* diskutil cs delete	
 
 SILC printers config 
 	- specifics?
@@ -43,10 +40,6 @@ Network configure script errors
 	- failures 100% repeatable?
 
 DS reporting using our log files app
-
-HRC staff machines to Mt Lion
-	- set iMac with Lion, try Mountain Lion updater from macdev
-	- need ucc.ssm account (or other)?
 
 DISCVRY 350 resolution/mirroring by hand
 
