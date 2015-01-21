@@ -26,8 +26,9 @@ tech studio DS setup?
 	
 Logical volume check for DS workflows
 	- what workflow(s)?
-	- separate script or ?
-	
+	* separate script YES
+	- script testing
+		- diskutil cs delete	
 
 SILC printers config 
 	- specifics?
@@ -48,3 +49,12 @@ HRC staff machines to Mt Lion
 DISCVRY 350 resolution/mirroring by hand
 
 PSH151 HDMI audio out
+
+setup iMac14,1 with dual boot COMMON
+
+setup new Yosemite iMac with COMMON Mavericks
+	- does it work?
+
+set iMac with Lion, try Mountain Lion updater from macdev
+	- need ucc.ssm account (or other)?
+
