@@ -52,11 +52,9 @@ DISCVRY 350 resolution/mirroring by hand
 
 PSH151 HDMI audio out
 
-setup iMac14,1 with dual boot COMMON
+setup iMac14,1 with dual boot COMMON for Kris
 
-setup new Yosemite iMac with COMMON Mavericks
-	* does it work --> YES
-	- install COMMON Mavericks, does it work?
+FixMe Java update -> test netbooted
 
 Bootpicker and Yosemite
 	- alternatives?
