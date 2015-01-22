@@ -1,11 +1,3 @@
-cube reconfig
-
-FV2
-	- what happens when you image an already-encrypted volume?
-		-> workflow fails; HD size shown as 0
-	- DS able to decrypt or ...?
-		-> script: checkForLVG.sh
-
 nms1/6 SSDs, drive config
 	- also talk with Jim/etc about installation
 
@@ -26,6 +18,8 @@ tech studio DS setup?
 	
 Logical volume check for DS workflows
 	- what workflow(s)?
+		- all Deskside?
+		- all Common?
 
 SILC printers config 
 	- specifics?
@@ -44,10 +38,6 @@ DS reporting using our log files app
 DISCVRY 350 resolution/mirroring by hand
 
 PSH151 HDMI audio out
-
-setup iMac14,1 with dual boot COMMON for Kris
-
-FixMe Java update -> test netbooted
 
 Bootpicker and Yosemite
 	- alternatives?
