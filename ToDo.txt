@@ -41,6 +41,8 @@ PSH151 HDMI audio out
 
 Bootpicker and Yosemite
 	- alternatives?
-	- BootRunner?
-	- reFind?
+		- BootRunner?
+		- reFind?
 
+Yosemite COMMON image
+	- things that don't work...
