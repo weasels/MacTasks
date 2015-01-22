@@ -4,10 +4,26 @@ nms1/6 SSDs, drive config
 LACP on all servers - start with Poly or Tempe?
 
 What to do with Xserves?
+	- server setup automation
+		- what to use?
+			- script, Chef, Puppet, etc.?
+	- macnms 8/9? OR macnms1a / macnms3a
 	- tech studio?
 	* check old Xserves in dev room
 		* G5s, so just keep for spare parts
 	- 2nd server for Poly?
+		- mod to Netboot Helper
+			- Poly 1, Poly 2
+			- Tempe 1, Tempe 2
+			- $campus 2, other than COMMON selection go to $campus Deskside server
+		- can two multicasts sessions coexist on Poly's flat network?
+		- (2) more OS X Server licenses?
+		- replace boot drives with SSDs
+		- add 3rd drive (full backup of data drive + boot drive backup)
+		- stagger DS syncing times
+	- do 2-port LACP
+
+Macdev LACP (with Tbolt-ethernet dongle)
 
 tech studio DS setup?
 	- what hardware?
