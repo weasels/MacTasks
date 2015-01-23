@@ -2,6 +2,7 @@ nms1/6 SSDs, drive config
 	- also talk with Jim/etc about installation
 
 LACP on all servers - start with Poly or Tempe?
+	- start with Macdev
 
 What to do with Xserves?
 	- server setup automation
@@ -22,8 +23,7 @@ What to do with Xserves?
 		- add 3rd drive (full backup of data drive + boot drive backup)
 		- stagger DS syncing times
 	- do 2-port LACP
-
-Macdev LACP (with Tbolt-ethernet dongle)
+		* request to CL
 
 tech studio DS setup?
 	- what hardware?
@@ -62,3 +62,5 @@ Bootpicker and Yosemite
 
 Yosemite COMMON image
 	- things that don't work...
+		- setup assistant (/var/db/.AppleSetupDone is still not being written/kept 
+
