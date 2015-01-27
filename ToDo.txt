@@ -2,7 +2,7 @@ Tasks
 nms1/6 SSDs, drive config
 	- also talk with Jim/etc about installation
 
-LACP on all servers - start with Poly or Tempe?
+LACP on all servers - start with dev
 
 What to do with Xserves?
 	- server setup automation
@@ -65,9 +65,11 @@ Yosemite COMMON image
 Xcode simulator launch problem
 	* updated loginScriptLoader-setupByUser.sh
 	* added to FixMe5
+	- test
 
-Merc C230 hdmi audio out
-	* updated loginScriptLoader-setupByUser-setHDMIaudioOut.sh
+Updated flashplayer
+	* added to FixMe6
+	- test
 
 Make new Yosemite vanilla image
 	- OS 10.10.2
