@@ -37,9 +37,9 @@ Logical volume check for DS workflows
 
 SILC printers config 
 	* specifics?
-		- IP: 129.219.150.224
-		- HP LaserJet600 M603
-		- HP PostScript v 19.9
+		* IP: 129.219.150.224
+		* HP LaserJet600 M603
+		* HP PostScript v 19.9
 	- anything special needed for Papercut?
 	* meet w/ David and/or Ken on Wed, 12:30p here
 
@@ -63,4 +63,12 @@ Yosemite COMMON image
 		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept 
 
 Xcode simulator launch problem
-	- updated loginScriptLoader-setupByUser.sh
+	* updated loginScriptLoader-setupByUser.sh
+	* added to FixMe5
+
+Merc C230 hdmi audio out
+	* updated loginScriptLoader-setupByUser-setHDMIaudioOut.sh
+
+Make new Yosemite vanilla image
+	- OS 10.10.2
+	- use AutoDMG
