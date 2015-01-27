@@ -2,7 +2,6 @@ nms1/6 SSDs, drive config
 	- also talk with Jim/etc about installation
 
 LACP on all servers - start with Poly or Tempe?
-	- start with Macdev
 
 What to do with Xserves?
 	- server setup automation
@@ -22,8 +21,6 @@ What to do with Xserves?
 		- replace boot drives with SSDs
 		- add 3rd drive (full backup of data drive + boot drive backup)
 		- stagger DS syncing times
-	- do 2-port LACP
-		* request to CL
 
 tech studio DS setup?
 	- what hardware?
@@ -38,12 +35,12 @@ Logical volume check for DS workflows
 		- all Common?
 
 SILC printers config 
-	- specifics?
+	* specifics?
 		- IP: 129.219.150.224
 		- HP LaserJet600 M603
 		- HP PostScript v 19.9
 	- anything special needed for Papercut?
-	- meet w/ David and/or Ken on ____ date?
+	* meet w/ David and/or Ken on Wed, 12:30p here
 
 Network configure script errors
 	- check cases
@@ -62,5 +59,7 @@ Bootpicker and Yosemite
 
 Yosemite COMMON image
 	- things that don't work...
-		- setup assistant (/var/db/.AppleSetupDone is still not being written/kept 
+		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept 
 
+Xcode simulator launch problem
+	- updated loginScriptLoader-setupByUser.sh
