@@ -1,8 +1,6 @@
 Tasks
-nms1/6 SSDs, drive config
-	- also talk with Jim/etc about installation
-
 LACP on all servers - start with dev
+	- when nms1/6 ready, look in SN for "remote" and then uto server installation
 
 What to do with Xserves?
 	- server setup automation
@@ -50,8 +48,6 @@ Network configure script errors
 check /var/folders cleanout at startup script!
 
 DS reporting using our log files app
-
-DISCVRY 350 resolution/mirroring by hand
 
 PSH151 HDMI audio out
 
