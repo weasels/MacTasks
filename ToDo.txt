@@ -37,15 +37,17 @@ Logical volume check for DS workflows
 
 SILC printers config 
 	* specifics?
-		* IP: 129.219.150.224
+		* IP: 129.219.150.227
 		* HP LaserJet600 M603
+		* RAM 512MB
+		* Duplex w/ front + rear output bins
 		* HP PostScript v 19.9
-	- anything special needed for Papercut?
-	* meet w/ David and/or Ken on Wed, 12:30p here
 
 Network configure script errors
 	- check cases
 	- failures 100% repeatable?
+
+check /var/folders cleanout at startup script!
 
 DS reporting using our log files app
 
@@ -72,5 +74,6 @@ Updated flashplayer
 	- test
 
 Make new Yosemite vanilla image
-	- OS 10.10.2
-	- use AutoDMG
+	* OS 10.10.2
+	* use AutoDMG
+	- test
