@@ -65,5 +65,4 @@ Make new Yosemite vanilla image
 	* use AutoDMG
 	- test
 
-Firefox add security exception for math.asu.edu ?
-
+Test curl from script to grab updated program versions
