@@ -45,7 +45,7 @@ Network configure script errors
 	- check cases
 	- failures 100% repeatable?
 
-check /var/folders cleanout at startup script!
+check /var/folders cleanout at shutdown script!
 
 DS reporting using our log files app
 
@@ -60,16 +60,10 @@ Yosemite COMMON image
 	- things that don't work...
 		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept 
 
-Xcode simulator launch problem
-	* updated loginScriptLoader-setupByUser.sh
-	* added to FixMe5
-	- test
-
-Updated flashplayer
-	* added to FixMe6
-	- test
-
 Make new Yosemite vanilla image
 	* OS 10.10.2
 	* use AutoDMG
 	- test
+
+Firefox add security exception for math.asu.edu ?
+
