@@ -66,3 +66,68 @@ Make new Yosemite vanilla image
 	- test
 
 Test curl from script to grab updated program versions
+	- curlTest.sh
+	- archicad
+		- http://dl.graphisoft.com/ftp/techsupport/downloads/ac17/AC17-8000-HOTFIX8-MAC.dmg
+	- AIM
+		- http://download.newaol.com/aim/mac/AIM_Install.dmg
+	- android studio 
+		-https://dl.google.com/dl/android/studio/install/1.0.1/android-studio-ide-1641136.dmg
+	- audacity
+		line_containing_dmg_url=$(curl -s http://audacity.sourceforge.net/download/mac | grep dmg)
+		dmg_url=$(echo $line_containing_dmg_url | awk -F'"' {'print $2'})
+		curl --url $dmg_url --output /tmp/audacity_unverified.dmg
+		filesize=$(du -sm /tmp/audacity_unverified.dmg | awk -F' ' {'print $1'})
+		if [[ $filesize == '1' ]]; then
+    		# File size is too small to be real
+		else
+    		# File size is good
+		fi
+	- blender
+		- http://mirror.cs.umn.edu/blender.org/release/Blender2.73/blender-2.73a-OSX_10.6-x86_64.zip
+	- clamxav
+		#!/bin/sh
+		############################################
+		## Documentation:
+		## This script downloads the latest version of clamav and installs
+		## it. I've used the download mirror in Phoenix Arizona. You should
+		## modify the url variable to the mirror closest to you.
+		############################################
+		url="http://easynews.dl.sourceforge.net/sourceforge/clamav/clamav-"
+		latest=`curl "http://www.clamav.net/stable.php#pagestart" \
+		| grep "<b>clamav " | awk '{print $2}' | head -1`
+		curl -O $url$latest.tar.gz && \
+		printf "The latest version of clamav or %s has been downloaded!\n" $latest && \
+		tar zxvf clamav-$latest.tar.gz && \
+		cd clamav-$latest
+		./configure --prefix=/usr/local/clamXav &&
+		make && \
+		sudo make install && \
+		cd ..
+		rm -rf clamav-$latest stable.* *.gz
+		sudo /Applications/ClamXav.app/Contents/Resources/clamavEngineInstaller.pkg/Contents/Resources/postflight
+	- gimp
+		- http://download.gimp.org/pub/gimp/v2.8/osx/gimp-2.8.14.dmg
+	- google drive
+		- http://dl.google.com/drive/installgoogledrive.dmg
+	- jing
+		- http://download.techsmith.com/jing/mac/jing.dmg
+	-LaTeX
+		- http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg
+	- ms office updates?
+		(for 14.4.7) http://www.microsoft.com/en-us/download/confirmation.aspx?id=45122
+	- R
+		- http://cran.r-project.org/bin/macosx/R-3.1.2-mavericks.pkg
+		- http://download1.rstudio.org/RStudio-0.98.1091.dmg
+	- sketchup pro
+		- http://dl.trimble.com/sketchup/SketchUpPro-en.dmg
+	- Stuffit expander
+		- my.smithmicro.com/downloads/files/expander_installer_en_5543.dmg
+	- TextWrangler
+		- http://ash.barebones.com/TextWrangler_4.5.3.dmg
+	- Tokaido
+		- pull from github: https://github.com/tokaido/tokaidoapp/releases
+	- vlc
+		- http://get.videolan.org/vlc/2.1.1/macosx/vlc-2.1.1.dmg
+	- weka
+		- http://prdownloads.sourceforge.net/weka/weka-3-6-12-oracle-jvm.dmg
