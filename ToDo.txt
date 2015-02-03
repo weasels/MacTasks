@@ -7,18 +7,33 @@ LACP on all servers - start with dev
 Deskside automation
 	- backup macmgmt.inre.asu.edu
 	- setup Munki and associated tools
-		- https://github.com/munki/munki
-		- curl https://munkibuilds.org/latest2.sh | sh
+		* https://github.com/munki/munki
+		* curl https://munkibuilds.org/latest2.sh | sh
 		OR
-		- https://github.com/autopkg/recipes/blob/master/munkitools/munkitools2.munki.recipe
+		* https://github.com/autopkg/recipes/blob/master/munkitools/munkitools2.munki.recipe
 
 		* Munki-in-a-box https://github.com/tbridge/munki-in-a-box
 		- MunkiAdmin https://github.com/hjuutilainen/munkiadmin
-		- MunkiReport https://github.com/munkireport/munkireport-php
+		* MunkiReport https://github.com/munkireport/munkireport-php
 	- verify AutoPkg is working
 		- http://autopkg.github.io/autopkg/
 		* repo loc: /Users/ahlbetsroff/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes
 		- 
+	- setup munki on a client
+		- macbookair
+		- need to do the following things for client setup:
+			- install munkitools
+			- modify defaults 
+				=> sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "https://macmgmt.inre.asu.edu/munki_repo"
+				=> sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "site_default"
+					- change "site_default" to whatever is the appropriate name of the manifest
+			- add munki server cert to system keychain
+				=> sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" /path/to/Cert.cert
+
+
+Remove FixMeDev & FixMeQA from nms2
+
+Remove Adobe CC specific workflows from DSAdmin
 
 What to do with Xserves?
 	- server setup automation
