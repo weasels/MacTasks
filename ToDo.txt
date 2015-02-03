@@ -6,14 +6,14 @@ LACP on all servers - start with dev
 
 Deskside automation
 	- backup macmgmt.inre.asu.edu
-	- setup Munki and associated tools
+	* setup Munki and associated tools
 		* https://github.com/munki/munki
 		* curl https://munkibuilds.org/latest2.sh | sh
 		OR
 		* https://github.com/autopkg/recipes/blob/master/munkitools/munkitools2.munki.recipe
 
 		* Munki-in-a-box https://github.com/tbridge/munki-in-a-box
-		- MunkiAdmin https://github.com/hjuutilainen/munkiadmin
+		* MunkiAdmin https://github.com/hjuutilainen/munkiadmin
 		* MunkiReport https://github.com/munkireport/munkireport-php
 	* verify AutoPkg is working
 		- http://autopkg.github.io/autopkg/
@@ -99,7 +99,3 @@ Make new Yosemite vanilla image
 	* OS 10.10.2
 	* use AutoDMG
 	- test
-
-*Test curl from script to grab updated program versions
-	* curlTest.sh
-	=> use munki instead
