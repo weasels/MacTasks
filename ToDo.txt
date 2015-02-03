@@ -12,13 +12,13 @@ Deskside automation
 		OR
 		- https://github.com/autopkg/recipes/blob/master/munkitools/munkitools2.munki.recipe
 
-		- Munki-in-a-box https://github.com/tbridge/munki-in-a-box
+		* Munki-in-a-box https://github.com/tbridge/munki-in-a-box
 		- MunkiAdmin https://github.com/hjuutilainen/munkiadmin
 		- MunkiReport https://github.com/munkireport/munkireport-php
-		* Reposado https://github.com/wdas/reposado => maybe not
 	- verify AutoPkg is working
 		- http://autopkg.github.io/autopkg/
-	- 
+		* repo loc: /Users/ahlbetsroff/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes
+		- 
 
 What to do with Xserves?
 	- server setup automation
