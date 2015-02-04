@@ -16,9 +16,10 @@ Deskside automation
 		* MunkiAdmin https://github.com/hjuutilainen/munkiadmin
 		* MunkiReport https://github.com/munkireport/munkireport-php
 	* verify AutoPkg is working
-		- http://autopkg.github.io/autopkg/
+		* http://autopkg.github.io/autopkg/
 		* repo loc: /Users/ahlbetsroff/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes
-		- 
+	- update AutoPkg recipes and import into Munki	
+
 	* setup munki on a client
 		- macbookair
 		- need to do the following things for client setup:
