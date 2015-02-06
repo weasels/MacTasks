@@ -2,7 +2,7 @@ Tasks
 LACP on all servers - start with dev
 	- when nms1/6 ready, look in SN for "remote" and then uto server installation
 
-Deskside automation
+Dev,Deskside, and more software automation
 	- backup macmgmt.inre.asu.edu
 	* setup Munki and associated tools
 		* https://github.com/munki/munki
@@ -13,31 +13,51 @@ Deskside automation
 		* Munki-in-a-box https://github.com/tbridge/munki-in-a-box
 		* MunkiAdmin https://github.com/hjuutilainen/munkiadmin
 		* MunkiReport https://github.com/munkireport/munkireport-php
+		* apache vhost setup => https://github.com/munkireport/munkireport-php/blob/master/docs/setup.md
 	* verify AutoPkg is working
 		* http://autopkg.github.io/autopkg/
 		* repo loc: /Users/ahlbetsroff/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes
 	* update AutoPkg recipes and import into Munki	
-
+		- https://github.com/autopkg/autopkg/wiki/Recipe-Format
 	* setup munki on a client
 		* macbookair
 		- need to do the following things for client setup:
 			- install munkitools
 			- modify defaults 
 				=> sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "https://macmgmt.inre.asu.edu/munki_repo"
-				=> sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "site_default"
-					- change "site_default" to whatever is the appropriate name of the manifest
+				=> sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "nameOfManifest"
+					- change manifest name to appropriate name ("test_devRoom_software" for dev room)
 			- add munki server cert to system keychain
 				=> sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" /path/to/Cert.cert
-	- add munki setup script 
-		- all COMMON dev room machines
-		- deskside test workflow
+	- add munki setup script => general-setupMunki.sh
+		* all COMMON dev room machines
+		* deskside test workflow
+		* package and/or script the following files:
+			* /Libary/Preferences/ManagedInstalls.plist
+			* /Libary/Preferences/Munkireport.plist
+			* munkireport
+			* munkitools_app
+			* munkitools_core
+			* munkitools_launchd
+			* munkiserver certificate
+		* begin as separate bash (not tcsh) script, postponed action => later integrate 
+		- test
 	- munki & SUS?
 	- add server manifest
 		- keep software up-to-date on which servers?
+	- munkireport and FV2?
+		- OR something like https://github.com/grahamgilbert/Crypt
+		- OR https://derflounder.wordpress.com/2013/04/29/filevault-setup-app-local-filevault-2-encryption-setup-and-enforcement/
 
 Remove FixMeDev & FixMeQA from nms2
 
 Remove Adobe CC specific workflows from DSAdmin
+
+Add suspicious package and/or other dev tools to AutoPkg
+	- create recipes for SP (.download and .munki)
+
+Check general-deleteFilevault.sh script to see if any workflows are calling
+	- if not, then delete script
 
 What to do with Xserves?
 	- server setup automation
@@ -77,6 +97,10 @@ SILC printers config
 		* HP PostScript v 19.9
 	* need PaperCut account
 	- add to SILC departmental script
+		- printers are installed via printers script
+		- copy PCClient app into /Applications, 775
+		- copy papercut-start.sh into /Library/Networks/Scripts, 700
+	- modify loginscriptLoader.sh to call last IF silc customer and IF script present in place of PaperCut's loginhook
 
 Network configure script errors
 	- check cases
@@ -102,3 +126,5 @@ Make new Yosemite vanilla image
 	* use AutoDMG
 	* test
 	- push into production?
+
+vmware esxi - see http://blog.newrelic.com/2014/06/12/turning-mac-minis-agile-mac-os-x-esxi-hosts-getting-baremetal/
