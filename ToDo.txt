@@ -2,8 +2,6 @@ Tasks
 LACP on all servers - start with dev
 	- when nms1/6 ready, look in SN for "remote" and then uto server installation
 
-*azcntr270 hdmi audio out
-
 Deskside automation
 	- backup macmgmt.inre.asu.edu
 	* setup Munki and associated tools
@@ -18,10 +16,10 @@ Deskside automation
 	* verify AutoPkg is working
 		* http://autopkg.github.io/autopkg/
 		* repo loc: /Users/ahlbetsroff/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes
-	- update AutoPkg recipes and import into Munki	
+	* update AutoPkg recipes and import into Munki	
 
 	* setup munki on a client
-		- macbookair
+		* macbookair
 		- need to do the following things for client setup:
 			- install munkitools
 			- modify defaults 
@@ -30,7 +28,12 @@ Deskside automation
 					- change "site_default" to whatever is the appropriate name of the manifest
 			- add munki server cert to system keychain
 				=> sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" /path/to/Cert.cert
-
+	- add munki setup script 
+		- all COMMON dev room machines
+		- deskside test workflow
+	- munki & SUS?
+	- add server manifest
+		- keep software up-to-date on which servers?
 
 Remove FixMeDev & FixMeQA from nms2
 
@@ -42,8 +45,6 @@ What to do with Xserves?
 			- script, Chef, Puppet, etc.?
 	- macnms 8/9? OR macnms1a / macnms3a
 	- tech studio?
-	* check old Xserves in dev room
-		* G5s, so just keep for spare parts
 	- 2nd server for Poly?
 		- mod to Netboot Helper
 			- Poly 1, Poly 2
@@ -52,7 +53,7 @@ What to do with Xserves?
 		- can two multicasts sessions coexist on Poly's flat network?
 		- (2) more OS X Server licenses?
 		- replace boot drives with SSDs
-		- add 3rd drive (full backup of data drive + boot drive backup)
+		- add 3rd drive (1TB spinning platter, full backup of data drive + boot drive backup)
 		- stagger DS syncing times
 
 tech studio DS setup?
@@ -75,7 +76,7 @@ SILC printers config
 		* Duplex w/ front + rear output bins
 		* HP PostScript v 19.9
 	* need PaperCut account
-	- firewall is blocking
+	- add to SILC departmental script
 
 Network configure script errors
 	- check cases
@@ -99,4 +100,5 @@ Yosemite COMMON image
 Make new Yosemite vanilla image
 	* OS 10.10.2
 	* use AutoDMG
-	- test
+	* test
+	- push into production?
