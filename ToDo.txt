@@ -76,6 +76,9 @@ What to do with Xserves?
 		- add 3rd drive (1TB spinning platter, full backup of data drive + boot drive backup)
 		- stagger DS syncing times
 
+Add permissions setting for TurningPoint dylib in special hardware script
+	- 775
+
 tech studio DS setup?
 	- what hardware?
 	- how to isolate network interfaces
@@ -96,19 +99,32 @@ SILC printers config
 		* Duplex w/ front + rear output bins
 		* HP PostScript v 19.9
 	* need PaperCut account
-	- add to SILC departmental script
-		- printers are installed via printers script
-		- copy PCClient app into /Applications, 775
-		- copy papercut-start.sh into /Library/Networks/Scripts, 700
-	- modify loginscriptLoader.sh to call last IF silc customer and IF script present in place of PaperCut's loginhook
-
+	* add to SILC departmental script
+		* printers are installed via printers script
+		* copy PCClient app into /Applications, 775
+		* copy loginitems into user Library/Preferences (has Smartboard + papercut client)
+	* modify loginscriptLoader.sh to call last IF silc customer and IF script present in place of PaperCut's loginhook
+		=> nope, try loginitem (works)
+	- test
+	- push to production:
+		- silc application files
+		- silc printer files
+		- silc department config script
+	
 Network configure script errors
-	- check cases
-	- failures 100% repeatable?
+	* check cases
+	- ready for case testing:
+		- iMac
+		- mini
+		- macbookair
+		- macbookpro
+		- macpro
 
 check /var/folders cleanout at shutdown script!
 	* definitely running on nightly shutdown
 	- may need to modify partition size upper limit in order for better functionality
+
+SILC app Antidote
 
 DS reporting using our log files app
 
