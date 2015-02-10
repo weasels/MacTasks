@@ -2,7 +2,12 @@ Tasks
 LACP on all servers - start with dev
 	- when nms1/6 ready, look in SN for "remote" and then uto server installation
 
+nms7 enable high performance mode
+	* serverinfo --perfmode  => checks whether enabled or not
+	* serverinfo --setperfmode YES  => enables high performance mode
+
 TurningPoint 
+	=> correct permissions (775) on the dylib
 	- set permissions in FixMe 
 	- set permissions in commonImageConfigure-specialSoftwareConfigure.sh
 
@@ -47,14 +52,14 @@ Dev,Deskside, and more software automation
 			* munkiserver certificate
 		* begin as separate bash (not tcsh) script, postponed action => later integrate 
 		- test
+			* deskside
+			- common
 	- munki & SUS?
 	- add server manifest
 		- keep software up-to-date on which servers?
 	- munkireport and FV2?
 		- OR something like https://github.com/grahamgilbert/Crypt
 		- OR https://derflounder.wordpress.com/2013/04/29/filevault-setup-app-local-filevault-2-encryption-setup-and-enforcement/
-
-Remove Adobe CC specific workflows from DSAdmin
 
 Add suspicious package and/or other dev tools to AutoPkg
 	- create recipes for SP (.download and .munki)
@@ -78,9 +83,6 @@ What to do with Xserves?
 		- replace boot drives with SSDs
 		- add 3rd drive (1TB spinning platter, full backup of data drive + boot drive backup)
 		- stagger DS syncing times
-
-Add permissions setting for TurningPoint dylib in special hardware script
-	- 775
 
 tech studio DS setup?
 	- what hardware?
