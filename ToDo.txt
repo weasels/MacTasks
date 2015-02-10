@@ -2,10 +2,6 @@ Tasks
 LACP on all servers - start with dev
 	- when nms1/6 ready, look in SN for "remote" and then uto server installation
 
-nms7 enable high performance mode
-	* serverinfo --perfmode  => checks whether enabled or not
-	* serverinfo --setperfmode YES  => enables high performance mode
-
 TurningPoint 
 	=> correct permissions (775) on the dylib
 	- set permissions in FixMe 
