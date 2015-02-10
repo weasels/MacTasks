@@ -2,6 +2,10 @@ Tasks
 LACP on all servers - start with dev
 	- when nms1/6 ready, look in SN for "remote" and then uto server installation
 
+TurningPoint 
+	- set permissions in FixMe 
+	- set permissions in commonImageConfigure-specialSoftwareConfigure.sh
+
 Dev,Deskside, and more software automation
 	- backup macmgmt.inre.asu.edu
 	* setup Munki and associated tools
@@ -32,6 +36,7 @@ Dev,Deskside, and more software automation
 	- add munki setup script => general-setupMunki.sh
 		* all COMMON dev room machines
 		* deskside test workflow
+		* common test workflow
 		* package and/or script the following files:
 			* /Libary/Preferences/ManagedInstalls.plist
 			* /Libary/Preferences/Munkireport.plist
@@ -48,8 +53,6 @@ Dev,Deskside, and more software automation
 	- munkireport and FV2?
 		- OR something like https://github.com/grahamgilbert/Crypt
 		- OR https://derflounder.wordpress.com/2013/04/29/filevault-setup-app-local-filevault-2-encryption-setup-and-enforcement/
-
-Remove FixMeDev & FixMeQA from nms2
 
 Remove Adobe CC specific workflows from DSAdmin
 
