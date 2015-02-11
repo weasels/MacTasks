@@ -47,15 +47,16 @@ Dev,Deskside, and more software automation
 			* munkitools_launchd
 			* munkiserver certificate
 		* begin as separate bash (not tcsh) script, postponed action => later integrate 
-		- test
+		* test
 			* deskside
-			- common
+			* common
 	- munki & SUS?
 	- add server manifest
 		- keep software up-to-date on which servers?
 	- munkireport and FV2?
 		- OR something like https://github.com/grahamgilbert/Crypt
 		- OR https://derflounder.wordpress.com/2013/04/29/filevault-setup-app-local-filevault-2-encryption-setup-and-enforcement/
+		- test key escrow
 
 Add suspicious package and/or other dev tools to AutoPkg
 	- create recipes for SP (.download and .munki)
@@ -93,24 +94,8 @@ Logical volume check for DS workflows
 		- all Common?
 
 SILC printers config 
-	* specifics?
-		* IP: 129.219.150.227
-		* HP LaserJet600 M603
-		* RAM 512MB
-		* Duplex w/ front + rear output bins
-		* HP PostScript v 19.9
-	* need PaperCut account
-	* add to SILC departmental script
-		* printers are installed via printers script
-		* copy PCClient app into /Applications, 775
-		* copy loginitems into user Library/Preferences (has Smartboard + papercut client)
-	* modify loginscriptLoader.sh to call last IF silc customer and IF script present in place of PaperCut's loginhook
-		=> nope, try loginitem (works)
-	* test
-	* push to production:
-		* silc application files
-		* silc printer files
-		* silc department config script
+	- test from nms1
+	- notify SILC
 	
 Network configure script errors
 	* check cases
@@ -126,6 +111,12 @@ check /var/folders cleanout at shutdown script!
 	- may need to modify partition size upper limit in order for better functionality
 
 SILC app Antidote
+	* get files & codes from SILC
+	- test install
+	- add to SILC department script
+	- test in dev
+	- push to production
+	- test in production
 
 DS reporting using our log files app
 
@@ -136,7 +127,22 @@ Bootpicker and Yosemite
 
 Yosemite COMMON image
 	- things that don't work...
-		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept => ready for test
+		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept
+		- Yahoo Messenger
+		- bootpicker
+		- CheatSheet needs to be enabled in System Preferences > Accessibility
+		- Chess asks about 1.2GB download for speech
+		- update to Lockdown Browser
+		- Maps barks about privacy setting using your location
+		- Sketchup license (and stuff from jan15 fixme)
+		- skip the icloud setup 
+		
+	* add LDAP/Kerberos config
+		* scripts to modify:
+			* commonImageConfigure.sh
+			* general-loadKerberosLDAP.sh
+		* test
+	* add bootpicker background (update production look for aug15)
 
 Make new Yosemite vanilla image
 	* OS 10.10.2
