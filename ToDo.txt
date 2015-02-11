@@ -34,7 +34,7 @@ Dev,Deskside, and more software automation
 					- change manifest name to appropriate name ("test_devRoom_software" for dev room)
 			- add munki server cert to system keychain
 				=> sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" /path/to/Cert.cert
-	- add munki setup script => general-setupMunki.sh
+	* add munki setup script => general-setupMunki.sh
 		* all COMMON dev room machines
 		* deskside test workflow
 		* common test workflow
@@ -106,11 +106,11 @@ SILC printers config
 		* copy loginitems into user Library/Preferences (has Smartboard + papercut client)
 	* modify loginscriptLoader.sh to call last IF silc customer and IF script present in place of PaperCut's loginhook
 		=> nope, try loginitem (works)
-	- test
-	- push to production:
-		- silc application files
-		- silc printer files
-		- silc department config script
+	* test
+	* push to production:
+		* silc application files
+		* silc printer files
+		* silc department config script
 	
 Network configure script errors
 	* check cases
