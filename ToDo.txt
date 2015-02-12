@@ -1,62 +1,24 @@
 Tasks
 LACP on all servers - start with dev
 	- when nms1/6 ready, look in SN for "remote" and then uto server installation
+		- cabling for nms1/6 ready
+		=> make request on Monday, Feb 16
 
 TurningPoint 
 	=> correct permissions (775) on the dylib
-	- set permissions in FixMe 
-	- set permissions in commonImageConfigure-specialSoftwareConfigure.sh
+	* set permissions in FixMe 
+	* set permissions in commonImageConfigure-specialSoftwareConfigure.sh
+	- push into production
 
 Dev,Deskside, and more software automation
-	- backup macmgmt.inre.asu.edu
-	* setup Munki and associated tools
-		* https://github.com/munki/munki
-		* curl https://munkibuilds.org/latest2.sh | sh
-		OR
-		* https://github.com/autopkg/recipes/blob/master/munkitools/munkitools2.munki.recipe
-
-		* Munki-in-a-box https://github.com/tbridge/munki-in-a-box
-		* MunkiAdmin https://github.com/hjuutilainen/munkiadmin
-		* MunkiReport https://github.com/munkireport/munkireport-php
-		* apache vhost setup => https://github.com/munkireport/munkireport-php/blob/master/docs/setup.md
-	* verify AutoPkg is working
-		* http://autopkg.github.io/autopkg/
-		* repo loc: /Users/ahlbetsroff/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes
-	* update AutoPkg recipes and import into Munki	
-		- https://github.com/autopkg/autopkg/wiki/Recipe-Format
-	* setup munki on a client
-		* macbookair
-		- need to do the following things for client setup:
-			- install munkitools
-			- modify defaults 
-				=> sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "https://macmgmt.inre.asu.edu/munki_repo"
-				=> sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "nameOfManifest"
-					- change manifest name to appropriate name ("test_devRoom_software" for dev room)
-			- add munki server cert to system keychain
-				=> sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" /path/to/Cert.cert
-	* add munki setup script => general-setupMunki.sh
-		* all COMMON dev room machines
-		* deskside test workflow
-		* common test workflow
-		* package and/or script the following files:
-			* /Libary/Preferences/ManagedInstalls.plist
-			* /Libary/Preferences/Munkireport.plist
-			* munkireport
-			* munkitools_app
-			* munkitools_core
-			* munkitools_launchd
-			* munkiserver certificate
-		* begin as separate bash (not tcsh) script, postponed action => later integrate 
-		* test
-			* deskside
-			* common
-	- munki & SUS?
+	* backup macmgmt.inre.asu.edu
 	- add server manifest
 		- keep software up-to-date on which servers?
 	- munkireport and FV2?
 		- OR something like https://github.com/grahamgilbert/Crypt
 		- OR https://derflounder.wordpress.com/2013/04/29/filevault-setup-app-local-filevault-2-encryption-setup-and-enforcement/
 		- test key escrow
+			=> doesn't auto-upload key info to munkireport, just on/off
 
 Add suspicious package and/or other dev tools to AutoPkg
 	- create recipes for SP (.download and .munki)
@@ -68,6 +30,7 @@ What to do with Xserves?
 	- server setup automation
 		- what to use?
 			- script, Chef, Puppet, etc.?
+			- how about Munki? run-once?
 	- macnms 8/9? OR macnms1a / macnms3a
 	- tech studio?
 	- 2nd server for Poly?
@@ -92,10 +55,6 @@ Logical volume check for DS workflows
 	- what workflow(s)?
 		- all Deskside?
 		- all Common?
-
-SILC printers config 
-	- test from nms1
-	- notify SILC
 	
 Network configure script errors
 	* check cases
@@ -112,8 +71,8 @@ check /var/folders cleanout at shutdown script!
 
 SILC app Antidote
 	* get files & codes from SILC
-	- test install
-	- add to SILC department script
+	* test install
+	* add to SILC department script
 	- test in dev
 	- push to production
 	- test in production
@@ -136,18 +95,11 @@ Yosemite COMMON image
 		- Maps barks about privacy setting using your location
 		- Sketchup license (and stuff from jan15 fixme)
 		- skip the icloud setup 
-		
-	* add LDAP/Kerberos config
-		* scripts to modify:
-			* commonImageConfigure.sh
-			* general-loadKerberosLDAP.sh
-		* test
-	* add bootpicker background (update production look for aug15)
+		- com.apple.notificationcenterui.agent is loaded in launchctl
 
 Make new Yosemite vanilla image
-	* OS 10.10.2
-	* use AutoDMG
-	* test
 	- push into production?
+
+ELK stack on OSX
 
 vmware esxi - see http://blog.newrelic.com/2014/06/12/turning-mac-minis-agile-mac-os-x-esxi-hosts-getting-baremetal/
