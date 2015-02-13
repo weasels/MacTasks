@@ -61,7 +61,7 @@ Network configure script errors
 	- ready for case testing:
 		- iMac
 		- mini
-		- macbookair
+		- macbookair => functions from Terminal; doesn't function on startup
 		- macbookpro
 		- macpro
 
@@ -74,6 +74,7 @@ SILC app Antidote
 	* test install
 	* add to SILC department script
 	- test in dev
+		- fix license file (not keeping code, so probably permissions)
 	- push to production
 	- test in production
 
