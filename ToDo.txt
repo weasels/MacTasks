@@ -9,12 +9,6 @@ LACP on all servers - start with dev
 		- rename old nms1/6 to nms8/9
 		- changeover nms1/6 ethernet to new boxes
 
-TurningPoint 
-	=> correct permissions (775) on the dylib
-	* set permissions in FixMe 
-	* set permissions in commonImageConfigure-specialSoftwareConfigure.sh
-	* push into production
-
 Dev,Deskside, and more software automation
 	* backup macmgmt.inre.asu.edu
 	- add server manifest
@@ -36,7 +30,7 @@ What to do with Xserves?
 		- what to use?
 			- script, Chef, Puppet, etc.?
 			- how about Munki? run-once?
-	- macnms 8/9? OR macnms1a / macnms3a
+	- macnms 8/9
 	- tech studio?
 	- 2nd server for Poly?
 		- mod to Netboot Helper
@@ -69,6 +63,8 @@ Network configure script errors
 		- macbookair => functions from Terminal; doesn't function on startup
 		- macbookpro
 		- macpro
+	- add configuration profile for wireless rooms+macbook airs in one place during netboot session, and in networkConfigure
+		- file is WiFi.autojoin.ssm.asu.edu.mobileconfig (on macdev)
 
 check /var/folders cleanout at shutdown script!
 	* definitely running on nightly shutdown
