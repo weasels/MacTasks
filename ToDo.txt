@@ -1,14 +1,19 @@
 Tasks
 LACP on all servers - start with dev
 	- when nms1/6 ready, look in SN for "remote" and then uto server installation
-		- cabling for nms1/6 ready
-		=> make request on Monday, Feb 16
+		* cabling for nms1/6 ready
+		* make request on Monday, Feb 16
+		- new servers installed in ISTB1
+		- new nms6 sync/copy from old nms6
+		- rename new nms1/6 
+		- rename old nms1/6 to nms8/9
+		- changeover nms1/6 ethernet to new boxes
 
 TurningPoint 
 	=> correct permissions (775) on the dylib
 	* set permissions in FixMe 
 	* set permissions in commonImageConfigure-specialSoftwareConfigure.sh
-	- push into production
+	* push into production
 
 Dev,Deskside, and more software automation
 	* backup macmgmt.inre.asu.edu
