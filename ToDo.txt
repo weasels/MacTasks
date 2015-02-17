@@ -58,25 +58,24 @@ Logical volume check for DS workflows
 	
 Network configure script errors
 	* check cases
-	- ready for case testing:
-		- iMac
-		- mini
+	x ready for case testing:
 		- macbookair => functions from Terminal; doesn't function on startup
-		- macbookpro
-		- macpro
-	- add configuration profile for wireless rooms+macbook airs in one place during netboot session, and in the following scripts:
+	* add configuration profile for wireless rooms+macbook airs in one place during netboot session, and in the following scripts:
 			commonImageConfigure-networkConfigure.sh  (in Scripts)
 			commonImage-DSpostActions-networkConfigure.sh  (in leftovers)
-			=> file are in Hardware-Software-Addons/Wireless
+			=> files are in Hardware-Software-Addons/Wireless
 		* file is WiFi.autojoin.ssm.asu.edu.mobileconfig (on macdev)
 			* place in /var/db/ConfigurationProfiles/Setup
 		* additional pref file is com.apple.airport.preferences.plist
 			* place in /Library/Preferences/SystemConfiguration
 		- ready for case testing:
-			- iMac
+			- iMac => 2012, 2013; 
 			- mini
-			- macbookair 
+			* macbookair 
 			- macbookpro
+				=> models 9,x and under have an ethernet jack; add in logic for this:
+				sysctl hw.model | grep MacBookPro | awk '{print $2}' | tr -d [a-z][A-Z],
+				=> the above gives output like 112, so compare against a baseline (100)
 			- macpro
 
 check /var/folders cleanout at shutdown script!
@@ -116,5 +115,9 @@ Make new Yosemite vanilla image
 	- push into production?
 
 ELK stack on OSX
+	- download ELK
+	- figure out installation
+	- feed DS logs
+	
 
 vmware esxi - see http://blog.newrelic.com/2014/06/12/turning-mac-minis-agile-mac-os-x-esxi-hosts-getting-baremetal/
