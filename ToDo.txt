@@ -83,12 +83,6 @@ check /var/folders cleanout at shutdown script!
 	- may need to modify partition size upper limit in order for better functionality
 
 SILC app Antidote
-	* get files & codes from SILC
-	* test install
-	* add to SILC department script
-	- test in dev
-		- fix license file (not keeping code, so probably permissions)
-	- push to production
 	- test in production
 
 DS reporting using our log files app
