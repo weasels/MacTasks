@@ -1,16 +1,12 @@
 Tasks
 LACP on all servers - start with dev
-	- when nms1/6 ready, look in SN for "remote" and then uto server installation
-		* cabling for nms1/6 ready
-		* make request on Monday, Feb 16
-		* new servers installed in ISTB1
-		- new nms6 sync/copy from old nms6
-		- rename new nms1/6 
-		- rename old nms1/6 to nms8/9
-		- changeover nms1/6 ethernet to new boxes
+	- new nms6 sync/copy from old nms6
+	- rename new nms1/6 
+	- rename old nms1/6 to nms8/9
+	- changeover nms1/6 ethernet to new boxes
+	- request server moves for nms8/9 (poly and ?)
 
 Dev,Deskside, and more software automation
-	* backup macmgmt.inre.asu.edu
 	- add server manifest
 		- keep software up-to-date on which servers?
 	- munkireport and FV2?
@@ -19,6 +15,12 @@ Dev,Deskside, and more software automation
 		- test key escrow
 			=> doesn't auto-upload key info to munkireport, just on/off
 			- make/implement key escrow?
+
+	- general-setupMunki.sh, commonImageConfigure.sh, commonImageConfigure-copyMunki.sh can go into production
+		=> general-setupMunki.sh can be included in Common workflows
+		=> don't push desksideImageConfigure.sh or desksideImageConfigure-copyMunki.sh
+			- there's not a good check against use outside of dev
+			- for that reason DON'T make deskside workflows call munki scripts outside of Weasel Test workflow(s)
 
 Add suspicious package and/or other dev tools to AutoPkg
 	- create recipes for SP (.download and .munki)
@@ -57,9 +59,6 @@ Logical volume check for DS workflows
 		- all Common?
 	
 Network configure script errors
-	* check cases
-	x ready for case testing:
-		- macbookair => functions from Terminal; doesn't function on startup
 	* add configuration profile for wireless rooms+macbook airs in one place during netboot session, and in the following scripts:
 			commonImageConfigure-networkConfigure.sh  (in Scripts)
 			commonImage-DSpostActions-networkConfigure.sh  (in leftovers)
@@ -69,7 +68,7 @@ Network configure script errors
 		* additional pref file is com.apple.airport.preferences.plist
 			* place in /Library/Preferences/SystemConfiguration
 		- ready for case testing:
-			- iMac => 2012, 2013; 
+			- iMac => 2007, 2012, 2013;
 			- mini
 			* macbookair 
 			- macbookpro
@@ -77,6 +76,7 @@ Network configure script errors
 				sysctl hw.model | grep MacBookPro | awk '{print $2}' | tr -d [a-z][A-Z],
 				=> the above gives output like 112, so compare against a baseline (100)
 			- macpro
+				=> works, but no need to create Eth1/2 since auto-populate does this for us
 
 check /var/folders cleanout at shutdown script!
 	* definitely running on nightly shutdown
@@ -109,9 +109,10 @@ Make new Yosemite vanilla image
 	- push into production?
 
 ELK stack on OSX
-	- download ELK
-	- figure out installation
+	* download ELK
+	* figure out installation
 	- feed DS logs
+		-https://github.com/driskell/log-courier
 	
 
 vmware esxi - see http://blog.newrelic.com/2014/06/12/turning-mac-minis-agile-mac-os-x-esxi-hosts-getting-baremetal/
