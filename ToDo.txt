@@ -69,21 +69,18 @@ Network configure script errors
 			* place in /Library/Preferences/SystemConfiguration
 		- ready for case testing:
 			- iMac => 2007, 2012, 2013;
-			- mini
+			* mini
 			* macbookair 
 			- macbookpro
 				=> models 9,x and under have an ethernet jack; add in logic for this:
 				sysctl hw.model | grep MacBookPro | awk '{print $2}' | tr -d [a-z][A-Z],
 				=> the above gives output like 112, so compare against a baseline (100)
-			- macpro
+			* macpro
 				=> works, but no need to create Eth1/2 since auto-populate does this for us
 
 check /var/folders cleanout at shutdown script!
 	* definitely running on nightly shutdown
 	- may need to modify partition size upper limit in order for better functionality
-
-SILC app Antidote
-	- test in production
 
 DS reporting using our log files app
 
@@ -111,8 +108,8 @@ Make new Yosemite vanilla image
 ELK stack on OSX
 	* download ELK
 	* figure out installation
-	- feed DS logs
+	* feed DS logs
 		-https://github.com/driskell/log-courier
-	
+	- queries?
 
 vmware esxi - see http://blog.newrelic.com/2014/06/12/turning-mac-minis-agile-mac-os-x-esxi-hosts-getting-baremetal/
