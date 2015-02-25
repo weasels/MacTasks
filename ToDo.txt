@@ -1,17 +1,21 @@
 Tasks
+
 LACP on all servers - start with dev
 	- new nms1/6 setup on KVM
-	- new nms6 sync/copy from old nms6
+	* new nms6 sync/copy from old nms6
 	* rename new nms1/6 
 	- rename old nms1/6 to nms8/9
 	* changeover nms1/6 ethernet to new boxes
 	- request server moves for nms8/9 (poly and ?)
 	- confirm initial cabling/connection on all servers
-		- nms1	=> cables too short
+		- nms1	=> cables too short => fixed
 		- nms3
 		- nms4
 		* nms5
-		- nms6  => cables too short
+		- nms6  => cables too short => fixed
+
+testing new nms1/6
+	- fix netboot sets to use https!!@!
 
 Xcode unable to boot iOS simulator (again)
 	- works with initial account; next account fails
