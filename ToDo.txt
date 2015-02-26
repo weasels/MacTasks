@@ -8,14 +8,27 @@ LACP on all servers - start with dev
 	* changeover nms1/6 ethernet to new boxes
 	- request server moves for nms8/9 (poly and ?)
 	- confirm initial cabling/connection on all servers
-		- nms1	=> cables too short => fixed
+		* nms1	=> cables too short => fixed
+		- nms3
+		* nms4
+		* nms5
+		* nms6  => cables too short => fixed
+	- LACP CenturyLink port config
+	- LACP config on each server
+		- nms1
 		- nms3
 		- nms4
-		* nms5
-		- nms6  => cables too short => fixed
+		- nms5
+		- nms6
+	* take old servers off of target disk mode
+	- add 1TB drive to nms8/9
+		- setup as nmsX-1-backup & nmsX-2-backup
 
 testing new nms1/6
-	- fix netboot sets to use https!!@!
+	* fix netboot sets to use https!!@!
+	* rebuild /Library/NetBoot and /Library/NetBoot/NetBootSP0 folders via Server.app
+	* test imaging from both
+	* announce availability
 
 Xcode unable to boot iOS simulator (again)
 	- works with initial account; next account fails
