@@ -1,39 +1,35 @@
 Tasks
 
+new printing setup...
+
 LACP on all servers - start with dev
 	- new nms1/6 setup on KVM
-	* new nms6 sync/copy from old nms6
-	* rename new nms1/6 
-	- rename old nms1/6 to nms8/9
-	* changeover nms1/6 ethernet to new boxes
+	* rename old nms1/6 to nms8/9
 	- request server moves for nms8/9 (poly and ?)
-	- confirm initial cabling/connection on all servers
-		* nms1	=> cables too short => fixed
-		- nms3
-		* nms4
-		* nms5
-		* nms6  => cables too short => fixed
+	* confirm initial cabling/connection on all servers
+		* nms3
 	- LACP CenturyLink port config
 	- LACP config on each server
 		- nms1
 		- nms3
 		- nms4
 		- nms5
-		- nms6
-	* take old servers off of target disk mode
-	- add 1TB drive to nms8/9
-		- setup as nmsX-1-backup & nmsX-2-backup
-
-testing new nms1/6
-	* fix netboot sets to use https!!@!
-	* rebuild /Library/NetBoot and /Library/NetBoot/NetBootSP0 folders via Server.app
-	* test imaging from both
-	* announce availability
+	* add 1TB drive to nms8/9
+		* setup as nmsX-1-backup & nmsX-2-backup
 
 Xcode unable to boot iOS simulator (again)
 	- works with initial account; next account fails
-		=> info still being held over?
-		=> specific to simulator model type?
+		=> info still being held over? YES => update to logoutScriptLoader-refreshASUuser.sh
+
+/Library/StartupItems/refreshASUuser
+	- overhaul to match logoutScriptLoader-refreshASUuser.sh behavior (functions for ungraceful logout)
+
+Netflix on Chrome
+	- update just plugin OR Chrome and plugin?
+
+Camtasia
+	- still asks admin auth each user?
+
 
 Dev,Deskside, and more software automation
 	- add server manifest
@@ -106,6 +102,8 @@ Network configure script errors
 				=> the above gives output like 112, so compare against a baseline (100)
 			* macpro
 				=> works, but no need to create Eth1/2 since auto-populate does this for us
+		- Poly confirmation?
+		- push files to production
 
 check /var/folders cleanout at shutdown script!
 	* definitely running on nightly shutdown
