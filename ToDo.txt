@@ -9,28 +9,15 @@ LACP on all servers - start with dev
 	- new nms1/6 setup on KVM
 	* rename old nms1/6 to nms8/9
 	- request server moves for nms8/9 (poly and ?)
-	* confirm initial cabling/connection on all servers
-		* nms3
 	- LACP CenturyLink port config
 	- LACP config on each server
 		- nms1
 		- nms3
 		- nms4
 		- nms5
-	* add 1TB drive to nms8/9
-		* setup as nmsX-1-backup & nmsX-2-backup
-
-Xcode unable to boot iOS simulator (again)
-	- works with initial account; next account fails FAIL
-	- scripts that do all of the delete/create/erase functions in macdev2/Robert Junk/ FAIL
-	=> reboot fixes behavior
-	=> doing xcrun simctl erase fixes behavior in user session
 
 /Library/StartupItems/refreshASUuser
 	- overhaul to match logoutScriptLoader-refreshASUuser.sh behavior (functions for ungraceful logout)
-
-Netflix on Chrome
-	- update just plugin OR Chrome and plugin?
 
 Camtasia
 	- still asks admin auth each user?
@@ -110,10 +97,6 @@ Network configure script errors
 		- Poly confirmation?
 		- push files to production
 
-check /var/folders cleanout at shutdown script!
-	* definitely running on nightly shutdown
-	- may need to modify partition size upper limit in order for better functionality
-
 Bootpicker and Yosemite
 	- alternatives?
 		- BootRunner?
@@ -143,12 +126,13 @@ ELK stack on OSX (macmgmt.inre.asu.edu)
 	- queries?
 		=> what about feeding our custom-made logs (flags) into ELK?
 			* initial test feeding logstash this file ( macnms7-aecp-ecanx-111-e01-D25KJ1U4DNMP-1211 ) with logstashTestConfig.conf
-			- modify logImaging.sh script to do csv of values
+			* modify logImaging.sh script to do csv of values
 				=> need the date command to do this:  `date -u +"%Y-%m-%d%H:%M:%SZ"
 				=> need to strip special characters from workflow names
 				- change pathing to be generic (not siloed into COMMON, Deskside?)
 			- convert old logs to new format
 				=> oldLogDataTransform.sh
+				- modify logging in logImaging.sh
 			* develop filter for syntax (use csv, example at: http://blog.trifork.com/2014/01/28/using-logstash-elasticsearch-and-kibana-to-monitor-your-video-card-a-tutorial/ )
 			- need agent that runs on servers to check for new files;
 				when new file found, upload to macmgmt
