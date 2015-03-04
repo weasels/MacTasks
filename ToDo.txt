@@ -18,8 +18,10 @@ LACP on all servers - start with dev
 		* setup as nmsX-1-backup & nmsX-2-backup
 
 Xcode unable to boot iOS simulator (again)
-	- works with initial account; next account fails
-		=> info still being held over? YES => update to logoutScriptLoader-refreshASUuser.sh
+	- works with initial account; next account fails FAIL
+	- scripts that do all of the delete/create/erase functions in macdev2/Robert Junk/ FAIL
+	=> reboot fixes behavior
+	=> doing xcrun simctl erase fixes behavior in user session
 
 /Library/StartupItems/refreshASUuser
 	- overhaul to match logoutScriptLoader-refreshASUuser.sh behavior (functions for ungraceful logout)
