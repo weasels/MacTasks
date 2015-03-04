@@ -2,6 +2,9 @@ Tasks
 
 new printing setup...
 
+Java_u_40
+	* in FixMe10
+
 LACP on all servers - start with dev
 	- new nms1/6 setup on KVM
 	* rename old nms1/6 to nms8/9
