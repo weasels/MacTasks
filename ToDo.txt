@@ -2,18 +2,15 @@ Tasks
 
 new printing setup...
 
-LACP on all servers - start with dev
+Server work
 	- new nms1/6 setup on KVM
 	- request server moves for nms8/9 (poly and ?)
-	- LACP config on each server
-		- nms5
 
 /Library/StartupItems/refreshASUuser
 	- overhaul to match logoutScriptLoader-refreshASUuser.sh behavior (functions for ungraceful logout)
 
 Camtasia
 	- update logoutScriptLoader-refreshASUuser.sh
-
 
 Dev,Deskside, and more software automation
 	- add server manifest
@@ -92,26 +89,37 @@ Bootpicker and Yosemite
 		- BootRunner?
 			- cost: $3500 OR $7000 that includes 2 yrs upgrades/maintenance
 			- components:
-				- package install
-				- /Library/Preferences/com.twocanoes.bootrunner.plist
-				- desktop background
+				- package installer from vendor
+				- file locations
+					- /Library/Preferences/com.twocanoes.bootrunner.plist
+					- desktop background
+					- /Library/LaunchAgents/com.twocanoes.bootrunner.plist
+					- /Library/PreferencePanes/"Boot Runner".prefpane
 
 Yosemite COMMON image
 	- things that don't work...
-		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept
-		- Yahoo Messenger
-		- bootpicker
+		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept & skip the icloud setup/diagnostics screens
+			=> update scripts with rtrouton's script
+				osvers=$(sw_vers -productVersion | awk -F. '{print $2}')
+				sw_vers=$(sw_vers -productVersion)
+				sw_build=$(sw_vers -buildVersion)
+				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant DidSeeCloudSetup -bool TRUE
+    				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant GestureMovieSeen none
+    				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant LastSeenCloudProductVersion "${sw_vers}"
+    				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant LastSeenBuddyBuildVersion "${sw_build}"
+		* Yahoo Messenger => remove
+		* bootpicker => remove
 		- CheatSheet needs to be enabled in System Preferences > Accessibility
 		- Chess asks about 1.2GB download for speech
 		- update to Lockdown Browser
 		- Maps barks about privacy setting using your location
 		- Sketchup license (and stuff from jan15 fixme)
-		- skip the icloud setup 
 		- com.apple.notificationcenterui.agent is loaded in launchctl
 		- can we reset cfprefsd at logout? benefit?
-
+		
 Make new Yosemite vanilla image
-	- push into production?
+	- 10.10.3 good for new macbooks?
+	- push into production
 
 ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
@@ -119,6 +127,9 @@ ELK stack on OSX (macmgmt.inre.asu.edu)
 		- OR launchdaemon that calls a simple script that does the work?
 			- need agent that runs on servers to check for new files;
 			- at specified time, upload to macmgmt
+				- add maclogs user to macmgmt, access DSLogs folder
+				- after logs are duplicated on macmgmt, move to "uploaded" folder on local server
+				- how about at 11p every night
 	* queries?
 		=> what about feeding our custom-made logs (flags) into ELK?
 			* initial test feeding logstash this file ( macnms7-aecp-ecanx-111-e01-D25KJ1U4DNMP-1211 ) with logstashTestConfig.conf
