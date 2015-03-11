@@ -2,6 +2,8 @@ Tasks
 
 new printing setup...
 
+Check with WPC to see if they are still running Win7 from our stuff
+
 Server work
 	- new nms1/6 setup on KVM
 	- request server moves for nms8/9 (poly and ?)
@@ -27,6 +29,7 @@ Dev,Deskside, and more software automation
 		=> don't push desksideImageConfigure.sh or desksideImageConfigure-copyMunki.sh
 			- there's not a good check against use outside of dev
 			- for that reason DON'T make deskside workflows call munki scripts outside of Weasel Test workflow(s)
+		=> add exception for imagebuilder under cpcom358 heading
 
 Add suspicious package and/or other dev tools to AutoPkg
 	- create recipes for SP (.download and .munki)
