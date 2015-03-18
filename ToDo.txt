@@ -4,6 +4,21 @@ new printing setup...
 
 Check with WPC to see if they are still running Win7 from our stuff
 
+10.10.2 netboot set for 2015 mbp
+	=> apple forked the OS 
+	=> solution: 10.10.3
+		=> temp solution: special netboot set, and thin-imaging workflow
+		- 2015mbpOnly.nbi
+			- get mbp back from Lou/Patrick
+		- Deskside thin-imaging workflow
+			- "Brand New Machines ONLY"
+			- desksideThinImageConfigure.sh & desksideThinImageConfigure-postActions.sh
+			- /Files/Deskside/Yosemite...
+			=> test
+				* initial success
+				* fix GB install order
+				- time = 35-40 min
+
 Server work
 	- new nms1/6 setup on KVM
 	- request server moves for nms8/9 (poly and ?)
@@ -30,9 +45,6 @@ Dev,Deskside, and more software automation
 			- there's not a good check against use outside of dev
 			- for that reason DON'T make deskside workflows call munki scripts outside of Weasel Test workflow(s)
 		=> add exception for imagebuilder under cpcom358 heading
-
-Add suspicious package and/or other dev tools to AutoPkg
-	- create recipes for SP (.download and .munki)
 
 Check general-deleteFilevault.sh script to see if any workflows are calling
 	- if not, then delete script
@@ -148,3 +160,9 @@ ELK stack on OSX (macmgmt.inre.asu.edu)
 			* ? need agent on macmgmt to import new stuff into ELK, or does ELK auto-update/import => ELK -can- autoimport if running
 
 vmware esxi - see http://blog.newrelic.com/2014/06/12/turning-mac-minis-agile-mac-os-x-esxi-hosts-getting-baremetal/
+	* download hypervisor 6
+	* download fusion 7 
+		=> both on macdev
+	* install esxi
+	* create vm
+	- install osx on vm
