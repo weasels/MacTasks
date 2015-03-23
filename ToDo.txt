@@ -2,22 +2,23 @@ Tasks
 
 new printing setup...
 
-Check with WPC to see if they are still running Win7 from our stuff
-
 10.10.2 netboot set for 2015 mbp
 	=> apple forked the OS 
 	=> solution: 10.10.3
 		=> temp solution: special netboot set, and thin-imaging workflow
-		- 2015mbpOnly.nbi
-			- get mbp back from Lou/Patrick
+		- 2015mba72Only.nbi
+			- get mba back from Lou/Patrick => NOPE
+			- get mba from Ron
 		- Deskside thin-imaging workflow
 			- "Brand New Machines ONLY"
 			- desksideThinImageConfigure.sh & desksideThinImageConfigure-postActions.sh
 			- /Files/Deskside/Yosemite...
 			=> test
 				* initial success
-				* fix GB install order
-				- time = 35-40 min
+					* fix GB install order
+					* time = 35-40 min
+				- on CS hard drive
+				- on FV2 hard drive
 
 Server work
 	- new nms1/6 setup on KVM
@@ -27,7 +28,7 @@ Server work
 	- overhaul to match logoutScriptLoader-refreshASUuser.sh behavior (functions for ungraceful logout)
 
 Camtasia
-	- update logoutScriptLoader-refreshASUuser.sh
+	- update logoutScriptLoader-refreshASUuser.sh => push out
 
 Dev,Deskside, and more software automation
 	- add server manifest
@@ -112,6 +113,7 @@ Bootpicker and Yosemite
 					- /Library/PreferencePanes/"Boot Runner".prefpane
 
 Yosemite COMMON image
+	- check login/logout hooks + our other config junk
 	- things that don't work...
 		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept & skip the icloud setup/diagnostics screens
 			=> update scripts with rtrouton's script
@@ -133,7 +135,7 @@ Yosemite COMMON image
 		- can we reset cfprefsd at logout? benefit?
 		
 Make new Yosemite vanilla image
-	- 10.10.3 good for new macbooks?
+	- 10.10.3 when released
 	- push into production
 
 ELK stack on OSX (macmgmt.inre.asu.edu)
