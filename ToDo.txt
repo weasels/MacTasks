@@ -6,9 +6,12 @@ new printing setup...
 	=> apple forked the OS 
 	=> solution: 10.10.3
 		=> temp solution: special netboot set, and thin-imaging workflow
-		- 2015mba72Only.nbi
-			- get mba back from Lou/Patrick => NOPE
-			- get mba from Ron
+		- mba7.2.ONLY-Sign-InRequiredNB10.10.2.nbi
+			* get mba back from Lou/Patrick => NOPE
+			* get mba from Ron
+				* run thin-imaging workflow
+				- notify Ron to pickup
+		- push to nms6
 		- Deskside thin-imaging workflow
 			- "Brand New Machines ONLY"
 			- desksideThinImageConfigure.sh & desksideThinImageConfigure-postActions.sh
@@ -17,8 +20,8 @@ new printing setup...
 				* initial success
 					* fix GB install order
 					* time = 35-40 min
-				- on CS hard drive
-				- on FV2 hard drive
+				* on CS hard drive => Works
+				* on FV2 hard drive => NOPE
 
 Server work
 	- new nms1/6 setup on KVM
