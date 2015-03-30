@@ -2,26 +2,32 @@ Tasks
 
 new printing setup...
 
+DS1.6.12
+	- CoreStorage:
+		=> in order to image a CS volume, the target is different (not /dev/disk0s2)
+		=> so far, its /dev/disk26
+	- which is better, a separate workflow or a script that deals with this? => SCRIPT!
+
+DS1.6.13
+	- netboot sets that will have to be rebuilt:
+		- 10.7 deskside
+		- 10.10.3 both
+
 10.10.2 netboot set for 2015 mbp
 	=> apple forked the OS 
 	=> solution: 10.10.3
 		=> temp solution: special netboot set, and thin-imaging workflow
-		- mba7.2.ONLY-Sign-InRequiredNB10.10.2.nbi
+		* mba7.2.ONLY-Sign-InRequiredNB10.10.2.nbi
 			* get mba back from Lou/Patrick => NOPE
 			* get mba from Ron
 				* run thin-imaging workflow
-				- notify Ron to pickup
+				* notify Ron to pickup
 		- push to nms6
 		- Deskside thin-imaging workflow
 			- "Brand New Machines ONLY"
-			- desksideThinImageConfigure.sh & desksideThinImageConfigure-postActions.sh
+			* desksideThinImageConfigure.sh & desksideThinImageConfigure-postActions.sh
 			- /Files/Deskside/Yosemite...
-			=> test
-				* initial success
-					* fix GB install order
-					* time = 35-40 min
-				* on CS hard drive => Works
-				* on FV2 hard drive => NOPE
+			- afp files from 7 to nms3
 
 Server work
 	- new nms1/6 setup on KVM
@@ -78,8 +84,31 @@ What to do with Xserves?
 
 Logical volume check for DS workflows
 	- what workflow(s)?
-		- all Deskside?
-		- all Common?
+		- Deskside: 
+			- 10.10 Yosemite
+		- COMMON:
+			- Full Monty
+			- Full Monty -- prompt
+			- Full Monty Win Eng
+			- Full Monty Win Eng -- prompt
+			- Mac OS X
+			- Mac OS X -- prompt
+			- HAL 9000 JUST Monty
+			- HAL 9000 Mac OS X
+			- General Prep for Salvage
+			- Multicast Mac OS X
+			- Multicast Mac OS X -- prompt
+			- Testbed Just Monty -- prompt
+			- Testbed Mac OS X
+			- Testbed Mac OS X -- prompt
+	- general-checkForLVG.sh
+		- cases:
+			=> Common
+				* CS hd
+				- non-CS hd
+			=> Deskside
+				- CS hd
+				- non-CS hd
 	
 Network configure script errors
 	* add configuration profile for wireless rooms+macbook airs in one place during netboot session, and in the following scripts:
@@ -91,7 +120,7 @@ Network configure script errors
 		* additional pref file is com.apple.airport.preferences.plist
 			* place in /Library/Preferences/SystemConfiguration
 		- ready for case testing:
-			- iMac => 2007, 2012, 2013;
+			* iMac => 2007, 2012, 2013;
 			* mini
 			* macbookair 
 			- macbookpro
@@ -100,7 +129,7 @@ Network configure script errors
 				=> the above gives output like 112, so compare against a baseline (100)
 			* macpro
 				=> works, but no need to create Eth1/2 since auto-populate does this for us
-		- Poly confirmation?
+		* Poly confirmation?
 		- push files to production
 
 Bootpicker and Yosemite
