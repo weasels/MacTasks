@@ -1,7 +1,7 @@
-Tasks
+		Tasks
 **********************************************
 04.03.15 DS changes:
-	- COMMON: 7 (already announced),11, 12
+	- COMMON: 7 (already announced),11, *12
 	- Deskside: 4, 11
 **********************************************
 
@@ -117,9 +117,9 @@ Tasks
 	
 12_Network configure script errors
 	* add configuration profile for wireless rooms+macbook airs in one place during netboot session, and in the following scripts:
-			commonImageConfigure-networkConfigure.sh  (in Scripts)
-			commonImage-DSpostActions-networkConfigure.sh  (in leftovers)
-			=> files are in Hardware-Software-Addons/Wireless
+			*commonImageConfigure-networkConfigure.sh  (in Scripts)
+			*commonImage-DSpostActions-networkConfigure.sh  (in leftovers)
+			*=> files are in Hardware-Software-Addons/Wireless
 		* file is WiFi.autojoin.ssm.asu.edu.mobileconfig (on macdev)
 			* place in /var/db/ConfigurationProfiles/Setup
 		* additional pref file is com.apple.airport.preferences.plist
@@ -135,7 +135,7 @@ Tasks
 			* macpro
 				=> works, but no need to create Eth1/2 since auto-populate does this for us
 		* Poly confirmation?
-		- push files to production
+		* push files to production
 
 13_Bootpicker and Yosemite
 	- alternatives?
