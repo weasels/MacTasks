@@ -1,17 +1,11 @@
 		Tasks
 **********************************************
-04.03.15 DS changes:
-	- COMMON: 7 (already announced),11, *12
+04.10.15 DS changes:
+	- COMMON: 7 (already announced),11
 	- Deskside: 4, 11
 **********************************************
 
 1_new printing setup...
-
-2_DS1.6.12
-	- CoreStorage:
-		=> in order to image a CS volume, the target is different (not /dev/disk0s2)
-		=> so far, its /dev/disk26
-	- which is better, a separate workflow or a script that deals with this? => SCRIPT!
 
 3_DS1.6.13
 	- netboot sets that will have to be rebuilt:
@@ -61,9 +55,6 @@
 			- for that reason DON'T make deskside workflows call munki scripts outside of Weasel Test workflow(s)
 		=> add exception for imagebuilder under cpcom358 heading
 
-9_Check general-deleteFilevault.sh script to see if any workflows are calling
-	- if not, then delete script
-
 10_What to do with Xserves?
 	- server setup automation
 		- what to use?
@@ -110,33 +101,12 @@
 		- cases:
 			=> Common
 				* CS hd
-				- non-CS hd
+				* non-CS hd
+				*	 Fusion hd
 			=> Deskside
-				- CS hd
+				* CS hd
 				- non-CS hd
-	
-12_Network configure script errors
-	* add configuration profile for wireless rooms+macbook airs in one place during netboot session, and in the following scripts:
-			*commonImageConfigure-networkConfigure.sh  (in Scripts)
-			*commonImage-DSpostActions-networkConfigure.sh  (in leftovers)
-			*=> files are in Hardware-Software-Addons/Wireless
-		* file is WiFi.autojoin.ssm.asu.edu.mobileconfig (on macdev)
-			* place in /var/db/ConfigurationProfiles/Setup
-		* additional pref file is com.apple.airport.preferences.plist
-			* place in /Library/Preferences/SystemConfiguration
-		- ready for case testing:
-			* iMac => 2007, 2012, 2013;
-			* mini
-			* macbookair 
-			- macbookpro
-				=> models 9,x and under have an ethernet jack; add in logic for this:
-				sysctl hw.model | grep MacBookPro | awk '{print $2}' | tr -d [a-z][A-Z],
-				=> the above gives output like 112, so compare against a baseline (100)
-			* macpro
-				=> works, but no need to create Eth1/2 since auto-populate does this for us
-		* Poly confirmation?
-		* push files to production
-
+				- Fusion hd
 13_Bootpicker and Yosemite
 	- alternatives?
 		- BootRunner?
@@ -198,10 +168,13 @@
 			* develop filter for syntax (use csv, example at: http://blog.trifork.com/2014/01/28/using-logstash-elasticsearch-and-kibana-to-monitor-your-video-card-a-tutorial/ )
 			* ? need agent on macmgmt to import new stuff into ELK, or does ELK auto-update/import => ELK -can- autoimport if running
 
-17_vmware esxi - see http://blog.newrelic.com/2014/06/12/turning-mac-minis-agile-mac-os-x-esxi-hosts-getting-baremetal/
-	* download hypervisor 6
-	* download fusion 7 
-		=> both on macdev
-	* install esxi
-	* create vm
-	- install osx on vm
+17_Deskside workflows CoreStorage volume selection
+	- if no volume auto-specified, does imaging still function? => NO
+
+18_COMMON fusion mini support for Poly?
+	- test Common image workflow with Yosemite + checkForLVG.sh
+	=> needs special workflow
+		- remove the partitioning script, since separate drives function in the same manner
+		- break the fusion drive (with checkForLVG.sh)
+		- point Mac image at normal loc
+		- point Win image at /dev/disk1s2 (in workflow definition)
