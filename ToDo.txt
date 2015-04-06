@@ -80,8 +80,6 @@
 
 11_Logical volume check for DS workflows
 	- what workflow(s)?
-		- Deskside: 
-			- 10.10 Yosemite
 		- COMMON:
 			- Full Monty
 			- Full Monty -- prompt
@@ -102,11 +100,8 @@
 			=> Common
 				* CS hd
 				* non-CS hd
-				*	 Fusion hd
-			=> Deskside
-				* CS hd
-				- non-CS hd
-				- Fusion hd
+				* Fusion hd
+
 13_Bootpicker and Yosemite
 	- alternatives?
 		- BootRunner?
@@ -169,7 +164,11 @@
 			* ? need agent on macmgmt to import new stuff into ELK, or does ELK auto-update/import => ELK -can- autoimport if running
 
 17_Deskside workflows CoreStorage volume selection
-	- if no volume auto-specified, does imaging still function? => NO
+	* if no volume auto-specified, does imaging still function? => NO
+	* if no volume auto-specified, AND no volume auto-assigned as boot volume, does imaging still function? => YES
+	- What workflows to modify?
+		=> 10.10 Yosemite
+		=> 10.9 Mavericks
 
 18_COMMON fusion mini support for Poly?
 	- test Common image workflow with Yosemite + checkForLVG.sh
