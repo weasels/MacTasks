@@ -12,7 +12,7 @@
 		- 10.7 deskside
 		- 10.10.3 both
 
-4_10.10.2 netboot set for 2015 mbp
+4_10.10.2 netboot set for 2015 mba+mbp
 	=> apple forked the OS 
 	=> solution: 10.10.3
 		=> temp solution: special netboot set, and thin-imaging workflow
@@ -25,11 +25,11 @@
 		- Deskside thin-imaging workflow
 			- "Brand New Machines ONLY"
 			* desksideThinImageConfigure.sh & desksideThinImageConfigure-postActions.sh
-			- /Files/Deskside/Yosemite...
-			- afp files from 7 to nms3
+			* /Files/Deskside/Yosemite...
+		- rename nbi to deskside yosemite pattern
 
 5_Server work
-	- new nms1/6 setup on KVM
+	- new nms1/6 setup on KVM => how about headless hdmi plugins instead?
 	- request server moves for nms8/9 (poly and ?)
 
 6_/Library/StartupItems/refreshASUuser
