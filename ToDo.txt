@@ -97,12 +97,11 @@
 			- Testbed Just Monty -- prompt
 			- Testbed Mac OS X
 			- Testbed Mac OS X -- prompt
-	- general-checkForLVG.sh
-		- cases:
+	* general-checkForLVG.sh
+		* cases:
 			=> Common
 				* CS hd
 				* non-CS hd
-				* Fusion hd
 
 13_Bootpicker and Yosemite
 	- alternatives?
@@ -137,6 +136,7 @@
 		- Sketchup license (and stuff from jan15 fixme)
 		- com.apple.notificationcenterui.agent is loaded in launchctl
 		- can we reset cfprefsd at logout? benefit?
+			- what about migrating prefs to a) profile b) defaults c) combination?
 		
 15_Make new Yosemite vanilla image
 	- 10.10.3 when released
@@ -167,16 +167,8 @@
 
 17_Deskside workflows CoreStorage volume selection
 	* if no volume auto-specified, does imaging still function? => NO
-	* if no volume auto-specified, AND no volume auto-assigned as boot volume, does imaging still function? => YES
+	* if no volume auto-specified, AND no volume auto-assigned as boot volume, does imaging still function? => YES, sometimes
 	- What workflows to modify?
 		=> 10.10 Yosemite
 		=> 10.9 Mavericks
-		=> Fusion Drive 10.10 Yosemite
-
-18_COMMON fusion mini support for Poly? => BOUGHT BY MISTAKE -Tom
-	- test Common image workflow with Yosemite + checkForLVG.sh
-	=> needs special workflow
-		- remove the partitioning script, since separate drives function in the same manner
-		- break the fusion drive (with checkForLVG.sh)
-		- point Mac image at normal loc
-		- point Win image at /dev/disk1s2 (in workflow definition)
+		*=> Fusion Drive 10.10 Yosemite
