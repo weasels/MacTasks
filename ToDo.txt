@@ -80,6 +80,8 @@
 
 11_Logical volume check for DS workflows
 	- what workflow(s)?
+		- Deskside:
+			- Prep for Salvage
 		- COMMON:
 			- Full Monty
 			- Full Monty -- prompt
@@ -169,8 +171,9 @@
 	- What workflows to modify?
 		=> 10.10 Yosemite
 		=> 10.9 Mavericks
+		=> Fusion Drive 10.10 Yosemite
 
-18_COMMON fusion mini support for Poly?
+18_COMMON fusion mini support for Poly? => BOUGHT BY MISTAKE -Tom
 	- test Common image workflow with Yosemite + checkForLVG.sh
 	=> needs special workflow
 		- remove the partitioning script, since separate drives function in the same manner
