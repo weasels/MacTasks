@@ -2,31 +2,33 @@
 **********************************************
 04.10.15 DS changes:
 	- COMMON: 7 (already announced),11
-	- Deskside: 4, 11
+	- Deskside: 4, 11, 15, 17
 **********************************************
 
 1_new printing setup...
 
+2_new Deskside Yosemite image (10.10.3)
+
 3_DS1.6.13
 	- netboot sets that will have to be rebuilt:
 		- 10.7 deskside
-		- 10.10.3 both
 
 4_10.10.2 netboot set for 2015 mba+mbp
 	=> apple forked the OS 
-	=> solution: 10.10.3
-		=> temp solution: special netboot set, and thin-imaging workflow
-		* mba7.2.ONLY-Sign-InRequiredNB10.10.2.nbi
-			* get mba back from Lou/Patrick => NOPE
-			* get mba from Ron
-				* run thin-imaging workflow
-				* notify Ron to pickup
-		- push to nms6
-		- Deskside thin-imaging workflow
-			- "Brand New Machines ONLY"
+=>	=> solution: 10.10.3
+		=> 10.10.3 netboot set, and thin-imaging workflow
+		* push to nms6
+		* modify nms6 workflows (sync nms6 to 7, workflows & scripts only):
+			* E2: Brand New Machines Only -- [placeholder]
+			* E2a: Brand New Machine Post-Installs Only [workflow]
+			* E2b: [placeholder]
+			* E2b: Reimage -- [placeholder]   <= moved from E2: Reimage --
+		* add Scripts:
 			* desksideThinImageConfigure.sh & desksideThinImageConfigure-postActions.sh
 			* /Files/Deskside/Yosemite...
-		- rename nbi to deskside yosemite pattern
+		* move new 10.10 deskside nbi in place & rename old one OLD, add vanilla 10.10.3 image on each server
+		- check H1: Create Netboot Helper-Boot Drive (Yosemite) for 10.10.3 image
+
 
 5_Server work
 	- new nms1/6 setup on KVM => how about headless hdmi plugins instead?
@@ -102,6 +104,7 @@
 			=> Common
 				* CS hd
 				* non-CS hd
+	- sync workflows between nms7 & nms6
 
 13_Bootpicker and Yosemite
 	- alternatives?
@@ -139,8 +142,8 @@
 			- what about migrating prefs to a) profile b) defaults c) combination?
 		
 15_Make new Yosemite vanilla image
-	- 10.10.3 when released
-	- push into production
+	* 10.10.3 when released
+	* push into production
 
 16_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
@@ -168,7 +171,7 @@
 17_Deskside workflows CoreStorage volume selection
 	* if no volume auto-specified, does imaging still function? => NO
 	* if no volume auto-specified, AND no volume auto-assigned as boot volume, does imaging still function? => YES, sometimes
-	- What workflows to modify?
+	* What workflows to modify?
 		=> 10.10 Yosemite
 		=> 10.9 Mavericks
-		*=> Fusion Drive 10.10 Yosemite
+		*=> Fusion Drive 10.10 Yosemite & Mavericks
