@@ -10,26 +10,26 @@
 2_new Deskside Yosemite image (10.10.3)
 	- update app installs
 		- in build area
-		- in deskside files area (for post-install only workflow)
 			=> iMovie 10.0.7
-			=> Firefox 37.0.1
-			=> remove iPhoto
-			=> Xcode 6.3
-			=> clam 2.7.5
+			* Firefox 37.0.1
+			* remove iPhoto
+			* Xcode 6.3 + CLtools
+			* clam 2.7.5
 			=> fetch 5.7.5 ?
-			=> chrome 42.x
-			=> flashplayer
-			=> skype 7.6
-			=> vidyo
-			=> vlc 2.2
+			* chrome 42.x
+			* flashplayer
+			* skype 7.6
+			* vidyo
+			* vlc 2.2
 			=> check zInstallers dir
-			=> clamavinstallerengine
-			=> office 14.4.8
-			=> shockwave installer
+			* clamavinstallerengine
+			* shockwave installer
 			=> anyconnect vpn
-			=> java installer
+			* java
 			=> hp printer drivers
-
+			* ms office 14.4.9 (and remove other office updates back until 14.1.0)	
+			=> acrobat reader dc?		
+		- in deskside files area (for post-install only workflow)
 
 3_DS1.6.13
 	- netboot sets that will have to be rebuilt:
@@ -120,6 +120,8 @@
 		- com.apple.notificationcenterui.agent is loaded in launchctl
 		- can we reset cfprefsd at logout? benefit?
 			- what about migrating prefs to a) profile b) defaults c) combination?
+		- /var/folders supposedly fixed in yosemite, but if needed:
+			 find /var/folders -name "*.iscachebmp" -type f -exec rm -v "{}" \; 
 		
 11_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
