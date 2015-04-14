@@ -8,6 +8,28 @@
 1_new printing setup...
 
 2_new Deskside Yosemite image (10.10.3)
+	- update app installs
+		- in build area
+		- in deskside files area (for post-install only workflow)
+			=> iMovie 10.0.7
+			=> Firefox 37.0.1
+			=> remove iPhoto
+			=> Xcode 6.3
+			=> clam 2.7.5
+			=> fetch 5.7.5 ?
+			=> chrome 42.x
+			=> flashplayer
+			=> skype 7.6
+			=> vidyo
+			=> vlc 2.2
+			=> check zInstallers dir
+			=> clamavinstallerengine
+			=> office 14.4.8
+			=> shockwave installer
+			=> anyconnect vpn
+			=> java installer
+			=> hp printer drivers
+
 
 3_DS1.6.13
 	- netboot sets that will have to be rebuilt:
@@ -122,3 +144,4 @@
 			* develop filter for syntax (use csv, example at: http://blog.trifork.com/2014/01/28/using-logstash-elasticsearch-and-kibana-to-monitor-your-video-card-a-tutorial/ )
 			* ? need agent on macmgmt to import new stuff into ELK, or does ELK auto-update/import => ELK -can- autoimport if running
 
+12_rootpipe
