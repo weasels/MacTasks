@@ -29,7 +29,9 @@
 			* ms office 14.4.9 (and remove other office updates back until 14.1.0)	
 			* acrobat reader dc		
 			* photos app built in to vanilla? YES
-		- in deskside files area (for post-install only workflow)
+		* in deskside files area (for post-install only workflow)
+		=> push to nms6, other servers
+	- test on all our hardware
 
 3_DS1.6.13
 	- netboot sets that will have to be rebuilt:
@@ -97,10 +99,11 @@
 					- desktop background
 					- /Library/LaunchAgents/com.twocanoes.bootrunner.plist
 					- /Library/PreferencePanes/"Boot Runner".prefpane
+			- test with parallels windows vm (supposedly can launch)
 
 10_Yosemite COMMON image
 	- check login/logout hooks + our other config junk
-	- things that don't work...
+	- specific items...
 		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept & skip the icloud setup/diagnostics screens
 			=> update scripts with rtrouton's script
 				osvers=$(sw_vers -productVersion | awk -F. '{print $2}')
@@ -123,7 +126,17 @@
 		- /var/folders supposedly fixed in yosemite, but if needed:
 			 find /var/folders -name "*.iscachebmp" -type f -exec rm -v "{}" \; 
 		- Acrobat DC Cust. Wizard => don't run it from its dmg; it will give error code 27, which doesn't exist (copy it somewhere, like the desktop)
-		- new CC2014 build
+		- new CC2014 build => test
+			- Acrobat EULA & popups
+			- After Effects migrate settings popup
+			- remove Digital Editions 4.0
+			- *** Extension Manager CC admin prompt
+			- java se6 install prompt from flash builder
+			- illustrator what's new screen
+			- Audacity prompt for plugin installs
+			- tell Chess not to prompt again for 1.2GB of language
+			- 
+		- echo360
 		
 11_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
