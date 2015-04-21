@@ -142,6 +142,8 @@
 		* CHECK naming of commonImage-[DS]postActions-networkConfigure.sh
 		- check System Preferences > Extensions
 		- What preferences can be set via Profiles?
+			=> https://github.com/timsutton/mcxToProfile/blob/master/mcxToProfile.py
+				http://www.amsys.co.uk/2015/blog/creating-config-profiles-instead-first-boot-script/#.VTbPR2akUkU
 		- Defaults write examples here: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 		- echo360
 		- SPSS 23
