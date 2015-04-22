@@ -115,14 +115,13 @@
     				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant LastSeenBuddyBuildVersion "${sw_build}"
 		- Chess asks about 1.2GB download for speech
 		- update to Lockdown Browser
-		- Maps barks about privacy setting using your location
+		- Maps barks about privacy setting using your location => every time it's opened
 		- Sketchup license (and stuff from jan15 fixme)
 		- com.apple.notificationcenterui.agent is loaded in launchctl
 		- can we reset cfprefsd at logout? benefit?
 			- what about migrating prefs to a) profile b) defaults c) combination?
 		- /var/folders supposedly fixed in yosemite, but if needed:
 			 find /var/folders -name "*.iscachebmp" -type f -exec rm -v "{}" \; 
-		* Acrobat DC Cust. Wizard => don't run it from its dmg; it will give error code 27, which doesn't exist (copy it somewhere, like the desktop)
 		- new CC2014 build => test
 		- Acrobat EULA & popups
 		- After Effects migrate settings popup
@@ -134,12 +133,11 @@
 		- "What's New in OSX Yosemite popup" => implement the notification center thing to turn of stuff?
 		- remove Photos.app from Dock
 		- need MATLAB 2015a
+			- need FIK for install
 		- Numbers/Pages "What's New" splash screens
 		- Photos app "preparing library"
-		* sketchup license
 		- VLC check for album art popup
 		- Xcode install additional required components
-		* CHECK naming of commonImage-[DS]postActions-networkConfigure.sh
 		- check System Preferences > Extensions
 		- What preferences can be set via Profiles?
 			=> https://github.com/timsutton/mcxToProfile/blob/master/mcxToProfile.py
