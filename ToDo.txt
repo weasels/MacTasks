@@ -152,6 +152,8 @@
 		- CHECK /Library/StartupItems -> fully deprecated, no longer functions
 			=> see http://paulbeachsblog.blogspot.com/2015/02/yosemite-superserver-and-startupitems.html for syntax for launchd replacement
 			- means setComputerName, refreshASUuser, & keyAccess are not functioning
+			=> modify launchd-refreshASUuser.sh
+			=> modify launchd-setComputerNames.sh for BootRunner (instead of BootPicker items)
 		- need new k2 client
 		
 11_ELK stack on OSX (macmgmt.inre.asu.edu)
