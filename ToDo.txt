@@ -6,6 +6,11 @@
 **********************************************
 
 1_new printing setup...
+	- lpadmin notes:
+		>Cups printing to Windows/Samba queues retains the credentials of the first logged in user 
+		>if you don't use any "-o auth-info-required" flag in your lpadmin command, until reboot.
+		>we solved the problem using "-o auth-info-required=negotiate", but couldn't find another way 
+		>of clearing the previously cached credentials.
 
 2_new Deskside Yosemite image (10.10.3)
 	- update app installs
@@ -38,7 +43,7 @@
 		- 10.7 deskside
 
 4_Server work
-	- new nms1/6 setup on KVM => how about headless hdmi plugins instead?
+	- new nms1/6 setup on KVM
 	- request server moves for nms8/9 (poly and ?)
 
 5_/Library/StartupItems/refreshASUuser
@@ -100,6 +105,11 @@
 					- /Library/LaunchAgents/com.twocanoes.bootrunner.plist
 					- /Library/PreferencePanes/"Boot Runner".prefpane
 			- test with parallels windows vm (supposedly can launch)
+				=> can launch
+					- uses specific OSX user
+					- opens ^ user env
+					- have to build in hooks to auto-logout when closed
+					- can force quit in certain situations...so launchagent to do ^?
 
 10_Yosemite COMMON image
 	- check login/logout hooks + our other config junk
