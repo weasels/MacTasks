@@ -146,21 +146,22 @@
 		- /var/folders supposedly fixed in yosemite, but if needed:
 			 find /var/folders -name "*.iscachebmp" -type f -exec rm -v "{}" \; 
 		- new CC2014 build => test
-		-- Acrobat EULA & popups
-		- After Effects migrate settings popup
-		- remove Digital Editions 4.0
-		* *** Extension Manager CC admin prompt
+			- Acrobat EULA & popups
+			- After Effects migrate settings popup
+			- remove Digital Editions 4.0
+			- illustrator what's new screen
 		- java se6 install prompt from flash builder, Maple, SPSS
-		- illustrator what's new screen
+			=> stackoverflow.com/questions/19563766/eclipse-kepler-for-os-x-mavericks-request-java-se-6
+				- but still doesn't quite function
 		- Audacity prompt for plugin installs
 		- "What's New in OSX Yosemite popup" => implement the notification center thing to turn of stuff?
-		- remove Photos.app from Dock
-		- need MATLAB 2015a
+		- remove Photos.app from Dock => config profile(s) for docks
+		* need MATLAB 2015a
 			* need FIK for install
 		- Numbers/Pages "What's New" splash screens
 		- Photos app "preparing library"
 		- VLC check for album art popup
-		- Xcode install additional required components
+		* Xcode install additional required components
 		- check System Preferences > Extensions
 		- wireless setup is working, but Profile is not being installed...? 
 			=> .profileSetupDone gets written but profile not installed
@@ -170,13 +171,16 @@
 		- Defaults write examples here: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 		- echo360
 		- SPSS 23
-		- minitab
-		- change out bootpicker lines in scripts in favor of bootrunner config
-		- CHECK /Library/StartupItems -> fully deprecated, no longer functions
+		- minitab express
+			=> license server = "@pubkeyserver.asu.edu"
+		* change out bootpicker lines in scripts in favor of bootrunner config
+		- for bootrunner v2.0, do copy of individual components, not just single package install
+		* CHECK /Library/StartupItems -> fully deprecated, no longer functions
 			=> see http://paulbeachsblog.blogspot.com/2015/02/yosemite-superserver-and-startupitems.html for syntax for launchd replacement
-			- means setComputerName, refreshASUuser, & keyAccess are not functioning
-			=> modify launchd-refreshASUuser.sh
-			=> modify launchd-setComputerNames.sh for BootRunner (instead of BootPicker items)
+			* means setComputerName, refreshASUuser, & keyAccess are not functioning
+			*=> modify launchd-refreshASUuser.sh
+			*=> modify launchd-setComputerNames.sh for BootRunner (instead of BootPicker items)
+			*=> modify commonImageDepartmentConfigure-sda.sh for BootRunner (instead of BootPicker)
 		- need new k2 client
 		
 11_ELK stack on OSX (macmgmt.inre.asu.edu)
