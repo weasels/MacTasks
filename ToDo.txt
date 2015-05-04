@@ -13,10 +13,13 @@
 		>of clearing the previously cached credentials.
 
 1.5_user idle logout timer
-	- use profile to set /Library/Preferences/.GlobalPreferences.plist	
+	* use profile to set /Library/Preferences/.GlobalPreferences.plist	
 		=> key:  com.apple.autologout.AutoLogOutDelay
 		=> value: time, in seconds (60 min = 3600)
 		=> use "Forced" for profile setting
+	* test
+		- tests good
+		- profile located at macdev2/Robert Junk/mcxToProfile/userIdleLogoutSetting.mobileconfig
 
 2_new Deskside Yosemite image (10.10.3)
 	- update app installs
@@ -80,6 +83,9 @@
 		- what to use?
 			- script, Chef, Puppet, etc.?
 			- how about Munki? run-once?
+	- replace old xserve backup server?
+	- use for Casper setup?
+	- hotswap?
 	- macnms 8/9
 	- tech studio?
 		- what hardware?
@@ -110,7 +116,7 @@
 					- desktop background
 					- /Library/LaunchAgents/com.twocanoes.bootrunner.plist
 					- /Library/PreferencePanes/"Boot Runner".prefpane
-			- test with parallels windows vm (supposedly can launch)
+			* test with parallels windows vm (supposedly can launch)
 				=> can launch
 					- uses specific OSX user
 					- opens ^ user env
