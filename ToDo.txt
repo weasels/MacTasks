@@ -24,12 +24,13 @@
 2_new Deskside Yosemite image (10.10.3)
 	- update app installs
 		- in build area
-			* iMovie 10.0.7
-			* Firefox 37.0.1
+			- iMovie 10.0.8
+			- Firefox 37.0.2
+			- Keynote/Page/Numbers _.5.3
 			* remove iPhoto
 			* Xcode 6.3 + CLtools
 			* clam 2.7.5
-			* fetch 5.7.5 ?
+			* fetch 5.7.5 
 			* chrome 42.x
 			* flashplayer
 			* skype 7.6
@@ -39,13 +40,15 @@
 			* clamavinstallerengine
 			* shockwave installer
 			* anyconnect vpn
-			* java
+			* java 8_45
 			* ms office 14.4.9 (and remove other office updates back until 14.1.0)	
 			* acrobat reader dc		
 			* photos app built in to vanilla? YES
 		* in deskside files area (for post-install only workflow)
 		=> push to nms6, other servers
 	- test on all our hardware
+
+2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition
 
 3_DS1.6.13
 	- netboot sets that will have to be rebuilt:
@@ -135,6 +138,7 @@
     				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant GestureMovieSeen none
     				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant LastSeenCloudProductVersion "${sw_vers}"
     				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant LastSeenBuddyBuildVersion "${sw_build}"
+			=> added to zz-commonImageBuilder-postActions.sh
 		- Chess asks about 1.2GB download for speech
 		- update to Lockdown Browser
 		- dockfixup.plist is in /System/Library/CoreServices/Dock.app/Contents/Resources
@@ -182,6 +186,7 @@
 			*=> modify launchd-setComputerNames.sh for BootRunner (instead of BootPicker items)
 			*=> modify commonImageDepartmentConfigure-sda.sh for BootRunner (instead of BootPicker)
 		- need new k2 client
+		- StartupItems "checkForDSFullMontyStatus needs to be transitioned to launchd
 		
 11_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
@@ -207,3 +212,5 @@
 			* ? need agent on macmgmt to import new stuff into ELK, or does ELK auto-update/import => ELK -can- autoimport if running
 
 12_rootpipe
+
+13_Test Yosemite LDAP/Kerberos for Deskside
