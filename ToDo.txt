@@ -164,14 +164,17 @@
 		- java se6 install prompt from flash builder, Maple, SPSS
 			=> stackoverflow.com/questions/19563766/eclipse-kepler-for-os-x-mavericks-request-java-se-6
 				- but still doesn't quite function
-		- Audacity prompt for plugin installs
+		* Audacity prompt for plugin installs
 		- "What's New in OSX Yosemite popup" => implement the notification center thing to turn of stuff?
-		- remove Photos.app from Dock => config profile(s) for docks
+		- config profile(s) for docks
 		* need MATLAB 2015a
 			* need FIK for install
 		- Numbers/Pages "What's New" splash screens
+			=> added to Home Directories in Build area
 		- Photos app "preparing library"
+			=> added to Home Directories in Build area
 		- VLC check for album art popup
+			=> added to Home Directories in Build area
 		* Xcode install additional required components
 		- check System Preferences > Extensions
 		- wireless setup is working, but Profile is not being installed...? 
@@ -182,8 +185,9 @@
 		- Defaults write examples here: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 		- echo360
 		- SPSS 23
-		- minitab express
-			=> license server = "@pubkeyserver.asu.edu"
+			=> added to image build area
+		* minitab express
+			*=> license server = "@pubkeyserver.asu.edu"
 		* change out bootpicker lines in scripts in favor of bootrunner config
 		- for bootrunner v2.0, do copy of individual components, not just single package install
 		* CHECK /Library/StartupItems -> fully deprecated, no longer functions
