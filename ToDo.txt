@@ -46,13 +46,15 @@
 			* photos app built in to vanilla? YES
 		- in deskside files area (for post-install only workflow)
 		=> push to nms6, other servers
+	- check build scripts for app store receipt removal syntax (error on "HD/Applications..." rather than "/Volumes/Macintosh HD/Applications..."
 	- test on all our hardware
 
 2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition
 
-3_DS1.6.13
+3_DS1.6.15
 	- netboot sets that will have to be rebuilt:
-		- 10.7 deskside
+
+3.5_make 10.10 COMMON nbi
 
 4_Server work
 	- new nms1/6 setup on KVM
