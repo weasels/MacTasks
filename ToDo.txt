@@ -46,7 +46,7 @@
 			* photos app built in to vanilla? YES
 		- in deskside files area (for post-install only workflow)
 		=> push to nms6, other servers
-	- check build scripts for app store receipt removal syntax (error on "HD/Applications..." rather than "/Volumes/Macintosh HD/Applications..."
+	* check build scripts for app store receipt removal syntax (error on "HD/Applications..." rather than "/Volumes/Macintosh HD/Applications..."
 	- test on all our hardware
 
 2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition
@@ -128,47 +128,25 @@
 9_Yosemite COMMON image
 	- check login/logout hooks + our other config junk
 	- specific items...
-		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept & skip the icloud setup/diagnostics screens
-			=> update scripts with rtrouton's script
-				osvers=$(sw_vers -productVersion | awk -F. '{print $2}')
-				sw_vers=$(sw_vers -productVersion)
-				sw_build=$(sw_vers -buildVersion)
-				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant DidSeeCloudSetup -bool TRUE
-    				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant GestureMovieSeen none
-    				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant LastSeenCloudProductVersion "${sw_vers}"
-    				/usr/bin/defaults write "${USER_HOME}"/Library/Preferences/com.apple.SetupAssistant LastSeenBuddyBuildVersion "${sw_build}"
-			=> added to zz-commonImageBuilder-postActions.sh
+		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept
+			=> added to /Library/Networks/launchd-setComputerNames.sh
 			-test
-		- Chess asks about 1.2GB download for speech
-			=> added to Home Directories in Build area
 		- dockfixup.plist is in /System/Library/CoreServices/Dock.app/Contents/Resources
 			=> added to zz-commonImageBuilder-postActions.sh
 		- Maps barks about privacy setting using your location => every time it's opened
-		- Sketchup license (and stuff from jan15 fixme)
-			=> sketchup2015.pkg added to image build area
+			- add to known issues (and update known issues)
+		- Sketchup update
+			=> make package? or just copy?
 		- com.apple.notificationcenterui.agent is loaded in launchctl
 		- can we reset cfprefsd at logout? benefit?
 			- what about migrating prefs to a) profile b) defaults c) combination?
 		- /var/folders supposedly fixed in yosemite, but if needed:
 			 find /var/folders -name "*.iscachebmp" -type f -exec rm -v "{}" \; 
 		- new CC2014 build => test
-			- Acrobat/Reader EULA & popups
-				=> added to Home Directories in Build area
-			- After Effects migrate settings popup
-				=> added to Home Directories in Build area
-			- illustrator what's new screen
-				=> added to Home Directories in Build area
 		- java se6 install prompt from flash builder, Maple, SPSS
-			=> stackoverflow.com/questions/19563766/eclipse-kepler-for-os-x-mavericks-request-java-se-6
-				- but still doesn't quite function
+			=> added to build area
 		- "What's New in OSX Yosemite popup" => implement the notification center thing to turn of stuff?
 		- config profile(s) for docks
-		- Numbers/Pages "What's New" splash screens
-			=> added to Home Directories in Build area
-		- Photos app "preparing library"
-			=> added to Home Directories in Build area
-		- VLC check for album art popup
-			=> added to Home Directories in Build area
 		- check System Preferences > Extensions
 		- wireless setup is working, but Profile is not being installed...? 
 			=> .profileSetupDone gets written but profile not installed
@@ -177,15 +155,7 @@
 				http://www.amsys.co.uk/2015/blog/creating-config-profiles-instead-first-boot-script/#.VTbPR2akUkU
 		- Defaults write examples here: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 		- echo360
-		- SPSS 23
-			=> added to image build area
 		- for bootrunner v2.0, do copy of individual components, not just single package install
-		* CHECK /Library/StartupItems -> fully deprecated, no longer functions
-			=> see http://paulbeachsblog.blogspot.com/2015/02/yosemite-superserver-and-startupitems.html for syntax for launchd replacement
-			* means setComputerName, refreshASUuser, & keyAccess are not functioning
-			*=> modify launchd-refreshASUuser.sh
-			*=> modify launchd-setComputerNames.sh for BootRunner (instead of BootPicker items)
-			*=> modify commonImageDepartmentConfigure-sda.sh for BootRunner (instead of BootPicker)
 		- need new k2 client
 		- StartupItems "checkForDSFullMontyStatus needs to be transitioned to launchd
 		
