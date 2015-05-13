@@ -24,29 +24,8 @@
 2_new Deskside Yosemite image (10.10.3)
 	- update app installs
 		- in build area
-			- iMovie 10.0.8
-			- Firefox 37.0.2
-			- Keynote/Page/Numbers _.5.3
-			* remove iPhoto
-			* Xcode 6.3 + CLtools
-			* clam 2.7.5
-			* fetch 5.7.5 
-			* chrome 42.x
-			* flashplayer
-			* skype 7.6
-			* vidyo
-			* vlc 2.2
-			* check zInstallers dir
-			* clamavinstallerengine
-			* shockwave installer
-			* anyconnect vpn
-			- java 8_45
-			* ms office 14.4.9 (and remove other office updates back until 14.1.0)	
-			* acrobat reader dc		
-			* photos app built in to vanilla? YES
 		- in deskside files area (for post-install only workflow)
 		=> push to nms6, other servers
-	* check build scripts for app store receipt removal syntax (error on "HD/Applications..." rather than "/Volumes/Macintosh HD/Applications..."
 	- test on all our hardware
 
 2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition
@@ -55,6 +34,8 @@
 	- netboot sets that will have to be rebuilt:
 
 3.5_make 10.10 COMMON nbi
+	- Netboot Helper update
+	- how does all the hardware handle 10.10 nbi?
 
 4_Server work
 	- new nms1/6 setup on KVM
@@ -131,12 +112,11 @@
 		- setup assistant (/var/db/.AppleSetupDone) is still not being written/kept
 			=> added to /Library/Networks/launchd-setComputerNames.sh
 			-test
-		- dockfixup.plist is in /System/Library/CoreServices/Dock.app/Contents/Resources
-			=> added to zz-commonImageBuilder-postActions.sh
+				=> works, but after a 2nd restart?
+		- firefox 38 
 		- Maps barks about privacy setting using your location => every time it's opened
 			- add to known issues (and update known issues)
-		- Sketchup update
-			=> make package? or just copy?
+			=> remove Maps?
 		- com.apple.notificationcenterui.agent is loaded in launchctl
 		- can we reset cfprefsd at logout? benefit?
 			- what about migrating prefs to a) profile b) defaults c) combination?
@@ -145,6 +125,8 @@
 		- new CC2014 build => test
 		- java se6 install prompt from flash builder, Maple, SPSS
 			=> added to build area
+		- SPSS
+			- rename alias to " SPSS"
 		- "What's New in OSX Yosemite popup" => implement the notification center thing to turn of stuff?
 		- config profile(s) for docks
 		- check System Preferences > Extensions
