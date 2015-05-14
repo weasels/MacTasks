@@ -28,7 +28,7 @@
 		=> push to nms6, other servers
 	- test on all our hardware
 
-2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition
+2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition?
 
 3_DS1.6.15
 	- netboot sets that will have to be rebuilt:
@@ -113,6 +113,7 @@
 			=> added to /Library/Networks/launchd-setComputerNames.sh
 			-test
 				=> works, but after a 2nd restart?
+				=> added a reboot line after touch
 		- firefox 38 
 		- Maps barks about privacy setting using your location => every time it's opened
 			- add to known issues (and update known issues)
