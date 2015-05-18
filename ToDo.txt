@@ -1,8 +1,8 @@
 		Tasks
 **********************************************
-04.10.15 DS changes:
-	- COMMON: 6 (already announced)
-	- Deskside: 
+05.22.15 changes:
+	- COMMON: 5 (already announced), java/flash/silverlight updates (in Maintenance)
+	- Deskside: 2 - 10.10.3 Yosemite image release
 **********************************************
 
 1_new printing setup...
@@ -28,7 +28,7 @@
 		=> push to nms6, other servers
 	- test on all our hardware
 
-2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition?
+2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition? -> not the problem
 
 3_DS1.6.15
 	- netboot sets that will have to be rebuilt:
@@ -140,7 +140,7 @@
 		- echo360
 		- for bootrunner v2.0, do copy of individual components, not just single package install
 		- need new k2 client
-		- StartupItems "checkForDSFullMontyStatus needs to be transitioned to launchd
+
 		
 10_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
