@@ -11,6 +11,8 @@
 		>if you don't use any "-o auth-info-required" flag in your lpadmin command, until reboot.
 		>we solved the problem using "-o auth-info-required=negotiate", but couldn't find another way 
 		>of clearing the previously cached credentials.
+	- divvy print servers by campus
+		=> if $campus == Tempe, then $1, else $2
 
 1.5_user idle logout timer
 	* use profile to set /Library/Preferences/.GlobalPreferences.plist	
@@ -28,7 +30,12 @@
 		=> push to nms6, other servers
 	- test on all our hardware
 
-2.5_Run fsck_hfs at the end of Yosemite installs with recovery partition? -> not the problem
+2.5_display setting
+	- use special hardware/software column in reimagerTable
+	- what letters are we already using?
+		- a, h, n, s, w
+		- how about p?
+			=> if $specialHW == "p", set refresh rate to _value_
 
 3_DS1.6.15
 	- netboot sets that will have to be rebuilt:
