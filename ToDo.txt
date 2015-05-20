@@ -131,10 +131,9 @@
 		- /var/folders supposedly fixed in yosemite, but if needed:
 			 find /var/folders -name "*.iscachebmp" -type f -exec rm -v "{}" \; 
 		- new CC2014 build => test
-		- java se6 install prompt from flash builder, Maple, SPSS
-			=> added to build area
+			- uninstallers, deletions
 		- SPSS
-			- rename alias to " SPSS"
+			* rename alias to " SPSS"
 		- "What's New in OSX Yosemite popup" => implement the notification center thing to turn of stuff?
 		- config profile(s) for docks
 		- check System Preferences > Extensions
