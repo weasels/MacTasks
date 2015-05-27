@@ -40,6 +40,18 @@ next changes:
 		- a, h, n, s, w
 		- how about p?
 			=> if $specialHW == "p", set refresh rate to _value_
+	- what hardware does it work well on?
+		- iMac14,....
+		- iMac13?
+		- iMac12?
+		- iMac11?
+		- iMac8?
+		- iMac7?
+		- MacProX?
+		
+		- check for model OR for SSD?
+			- SSD
+				=> system_profiler SPSerialATADataType | awk '/Medium/{print $3$4}' 
 
 3_DS1.6.15
 	- netboot sets that will have to be rebuilt:
@@ -115,6 +127,7 @@ next changes:
 			-test
 				=> works, but after a 2nd restart?
 				=> added a reboot line after touch
+		- .profilesDone or similar flag check/removal prior to capture?
 		- android 
 			- sdk
 			* studio 1.2
