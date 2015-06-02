@@ -6,12 +6,12 @@ next changes:
 **********************************************
 
 0_new minis for conf room
-	- check video sleep problem
-		-> appears on HDMI when "Auto Select" is set on the monitor
-		-> works as normal when a specific input is selected
+	* check video sleep problem
+		=> SSD 2.8s look ok; on first boot have problem; after that, no problem
 	- determine which applications to delete
 		- probably can get rid of Adobe, would run prior to post-actions, so good
 	- write location-specific deletion
+		=> if type is conf?
 
 1_new printing setup...
 	- lpadmin notes:
