@@ -123,7 +123,7 @@ next changes:
 				=> works, but after a 2nd restart?
 				=> added a reboot line after touch
 		- .profilesDone or similar flag check/removal prior to capture?
-			- removed prior to 05.28.15 capture, for test
+			- remove prior to capture, for test
 		- android 
 			- sdk
 			* studio 1.2
@@ -160,6 +160,9 @@ next changes:
 			=> moved to post-actions (didn't change behavior when installed directly in image)
 		* safari splash screen
 		* updates for LaTeX
+		- mplus
+			=> demo version, but can run without license - features are what is limited
+			- can rename folder to Mplus (edit out "Demo")
 		
 9_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
