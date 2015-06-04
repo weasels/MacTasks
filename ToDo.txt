@@ -13,6 +13,9 @@ next changes:
 	- write location-specific deletion
 		=> if type is conf?
 
+0.5_add wait time to checkForLVG.sh
+	- necessary to prevent failures 
+
 1_new printing setup...
 	- lpadmin notes:
 		>Cups printing to Windows/Samba queues retains the credentials of the first logged in user 
@@ -129,7 +132,6 @@ next changes:
 			* studio 1.2
 			* gradle 2.4
 			- prefs prompt for migration
-		* netbeans 8.0.2
 		- Maps barks about privacy setting using your location => every time it's opened
 			- add to known issues (and update known issues)
 			=> remove Maps?
@@ -155,6 +157,9 @@ next changes:
 		- for bootrunner v2.0, do copy of individual components, not just single package install
 		- need new k2 client
 		- test device interactivity
+			- Messages, "Internet Accounts", iCloud data still being kept somewhere
+			- Google Chrome keeping name of last user acct
+			- Google Drive keeping tray icon for same users
 		- test user preference keeping (cfprefsd, etc.)
 		- canon printer drivers 3.2
 			=> moved to post-actions (didn't change behavior when installed directly in image)
@@ -163,6 +168,7 @@ next changes:
 		- mplus
 			=> demo version, but can run without license - features are what is limited
 			- can rename folder to Mplus (edit out "Demo")
+		
 		
 9_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
