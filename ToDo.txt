@@ -14,7 +14,7 @@ next changes:
 		=> if type is conf?
 
 0.5_add wait time to checkForLVG.sh
-	- necessary to prevent failures 
+	* necessary to prevent failures 
 
 1_new printing setup...
 	- lpadmin notes:
@@ -141,10 +141,8 @@ next changes:
 		- /var/folders supposedly fixed in yosemite, but if needed:
 			 find /var/folders -name "*.iscachebmp" -type f -exec rm -v "{}" \; 
 		- new CC2014 build => test
-			- uninstallers, deletions
-				* Lightroom
-				* upgrade Lightroom catalog prompts
-				* remove Adobe Photoshop Lightroom 5 from CC package
+			* Lightroom
+			* upgrade Lightroom catalog prompts
 		- "What's New in OSX Yosemite popup" => implement the notification center thing to turn of stuff?
 		- check System Preferences > Extensions
 		- wireless setup is working, but Profile is not being installed...? 
@@ -163,12 +161,12 @@ next changes:
 		- test user preference keeping (cfprefsd, etc.)
 		- canon printer drivers 3.2
 			=> moved to post-actions (didn't change behavior when installed directly in image)
-		* safari splash screen
-		* updates for LaTeX
+		- updates for LaTeX
+			- TeXShop won't open after updated
 		- mplus
 			=> demo version, but can run without license - features are what is limited
 			- can rename folder to Mplus (edit out "Demo")
-		
+		- other disk partitions showing up on desktop		
 		
 9_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
