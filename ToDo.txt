@@ -14,7 +14,8 @@ next changes:
 		=> if type is conf?
 
 0.5_add wait time to checkForLVG.sh
-	* necessary to prevent failures 
+	* necessary to prevent failures => works
+	- push out to production
 
 1_new printing setup...
 	- lpadmin notes:
