@@ -6,23 +6,19 @@ next changes:
 **********************************************
 
 0_new minis for conf room
-	* check video sleep problem
-		=> SSD 2.8s look ok; on first boot have problem; after that, no problem
 	- determine which applications to delete
 		- probably can get rid of Adobe, would run prior to post-actions, so good
 	- write location-specific deletion
 		=> if type is conf?
+	- modify table
+	- modify scripts
+		=> special hardware? postactions?
 
 0.5_add wait time to checkForLVG.sh
 	* necessary to prevent failures => works
 	- push out to production
 
 1_new printing setup...
-	- lpadmin notes:
-		>Cups printing to Windows/Samba queues retains the credentials of the first logged in user 
-		>if you don't use any "-o auth-info-required" flag in your lpadmin command, until reboot.
-		>we solved the problem using "-o auth-info-required=negotiate", but couldn't find another way 
-		>of clearing the previously cached credentials.
 	- divvy print servers by campus
 		=> if $campus == Tempe, then $1, else $2
 
@@ -53,10 +49,14 @@ next changes:
 				=> system_profiler SPSerialATADataType | awk '/Medium/{print $3$4}' 
 
 3_DS1.6.15
+	*	 update nms7
 	- netboot sets that will have to be rebuilt:
 
 3.5_make 10.10 COMMON nbi
+	* copy from 10.10.3 deskside
 	- Netboot Helper update
+		* version 7.3.5
+		- test all cases!
 	- how does all the hardware handle 10.10 nbi?
 
 4_Server work
@@ -144,8 +144,9 @@ next changes:
 			=> .profileSetupDone gets written but profile not installed
 		- Defaults write examples here: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 		* echo360
-			- need to set server URL => is there a single URL?
-			- ~/Library/Application Support/Echo360/Personal Capture/user-configuration.xml
+			* need to set server URL => is there a single URL?
+			* ~/Library/Application Support/Echo360/Personal Capture/user-configuration.xml
+			* server url = "echo360.org/device_api/c9914642-9575-4d3b-857b-851ddce6b9da"
 		- for bootrunner v2.0, do copy of individual components, not just single package install
 		- need new k2 client
 		- test device interactivity
@@ -156,8 +157,7 @@ next changes:
 		- canon printer drivers 3.2
 			=> moved to post-actions (didn't change behavior when installed directly in image)
 		- TeXShop won't open after updated
-		- other disk partitions showing up on desktop	
-		- python junk at / => makerbot	
+		- other disk partitions showing up on desktop	?	
 		
 9_ELK stack on OSX (macmgmt.inre.asu.edu)
 	* feed DS logs
